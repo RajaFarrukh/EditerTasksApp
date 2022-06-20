@@ -8,19 +8,23 @@
 import UIKit
 import YPImagePicker
 import iOSPhotoEditor
-
+import AWSS3
+import AWSCore
 
 class ViewController: UIViewController {
 
     var ypImagePickerReturendImage:UIImage? = nil
     var imageFianle:UIImage? = nil
     
+    let accessKey = "5hYU8BzyJtR4VsYbEmpHy"
+    let secretKey = "4sdUtd5ZB5lUMEPv9O"
+    let bucketName = "happr-media-bucket-username"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    
     
     // MARK: - Other Methods
     
@@ -37,6 +41,8 @@ class ViewController: UIViewController {
         
     }
 
+    
+    
     /*
      Method: openPhotoEditorViewController
      Description: Method to open PhotoEditorViewController
@@ -57,6 +63,26 @@ class ViewController: UIViewController {
         //photoEditor.hiddenControls = [.crop, .draw, .share]
         photoEditor.modalPresentationStyle = UIModalPresentationStyle.currentContext //or .overFullScreen for transparency
         present(photoEditor, animated: true, completion: nil)
+    }
+    
+ 
+    func uploadVideo(strUrl:String) {
+        //guard let path = Bundle.main.path(forResource: "Video", ofType: "mov") else { return }
+            let videoUrl = URL(fileURLWithPath: strUrl)
+            AWSS3Manager.shared.uploadVideo(videoUrl: videoUrl, progress: { [weak self] (progress) in
+                
+                guard let strongSelf = self else { return }
+                //strongSelf.progressView.progress = Float(progress)
+                
+            }) { [weak self] (uploadedFileUrl, error) in
+                
+                guard let strongSelf = self else { return }
+                if let finalPath = uploadedFileUrl as? String {
+                  //  strongSelf.s3UrlLabel.text = "Uploaded file url: " + finalPath
+                } else {
+                    print("\(String(describing: error?.localizedDescription))")
+                }
+            }
     }
     
     // MARK: - IBAction Methods
@@ -108,6 +134,7 @@ class ViewController: UIViewController {
         }
         present(picker, animated: true, completion: nil)
     }
+    
 }
 
 extension ViewController: PhotoEditorDelegate {
@@ -129,6 +156,7 @@ extension ViewController: PhotoEditorDelegate {
 }
 
 class ImageSaver: NSObject {
+    
     func writeToPhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
     }

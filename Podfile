@@ -8,6 +8,7 @@ target 'EditerTasksApp' do
   # Pods for EditerTasksApp
 	pod 'YPImagePicker'
   pod 'iOSPhotoEditor'
+  pod 'AWSS3'
 
   target 'EditerTasksAppTests' do
     inherit! :search_paths

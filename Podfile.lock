@@ -1,4 +1,7 @@
 PODS:
+  - AWSCore (2.27.10)
+  - AWSS3 (2.27.10):
+    - AWSCore (= 2.27.10)
   - iOSPhotoEditor (1.0.0)
   - PryntTrimmerView (4.0.2)
   - SteviaLayout (4.7.3)
@@ -7,22 +10,27 @@ PODS:
     - SteviaLayout (= 4.7.3)
 
 DEPENDENCIES:
+  - AWSS3
   - iOSPhotoEditor
   - YPImagePicker
 
 SPEC REPOS:
   trunk:
+    - AWSCore
+    - AWSS3
     - iOSPhotoEditor
     - PryntTrimmerView
     - SteviaLayout
     - YPImagePicker
 
 SPEC CHECKSUMS:
+  AWSCore: dbad318b7ff0fd86fb8387d3ad1f30049c05bc58
+  AWSS3: 0cf2cedb263368f624ca721e5c56a8cb59fc44bc
   iOSPhotoEditor: 2951f35246a31dcb428b6292248a9c065582d03e
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   YPImagePicker: f36043210c10b0783034eb1947d6e06e31c461e4
 
-PODFILE CHECKSUM: 5a775e3c676335575630d0d2d1000cf3e04eee71
+PODFILE CHECKSUM: 9f570e273bbdfb94d2be3f3f991f4c8282b5694d
 
 COCOAPODS: 1.11.3
