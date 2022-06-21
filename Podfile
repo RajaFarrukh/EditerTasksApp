@@ -8,7 +8,13 @@ target 'EditerTasksApp' do
   # Pods for EditerTasksApp
 	pod 'YPImagePicker'
   pod 'iOSPhotoEditor'
-  pod 'AWSS3'
+  pod 'IQKeyboardManagerSwift'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'MBProgressHUD', '~> 1.2.0'
 
   target 'EditerTasksAppTests' do
     inherit! :search_paths

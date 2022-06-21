@@ -8,23 +8,25 @@
 import UIKit
 import YPImagePicker
 import iOSPhotoEditor
-import AWSS3
-import AWSCore
+import FirebaseDatabase
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+import MBProgressHUD
+import FirebaseStorage
+import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     var ypImagePickerReturendImage:UIImage? = nil
     var imageFianle:UIImage? = nil
     
-    let accessKey = "5hYU8BzyJtR4VsYbEmpHy"
-    let secretKey = "4sdUtd5ZB5lUMEPv9O"
-    let bucketName = "happr-media-bucket-username"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     
     // MARK: - Other Methods
     
@@ -40,8 +42,6 @@ class ViewController: UIViewController {
         
         
     }
-
-    
     
     /*
      Method: openPhotoEditorViewController
@@ -55,9 +55,9 @@ class ViewController: UIViewController {
         //photoEditor.colors = [.red, .blue, .green]
         
         //Stickers that the user will choose from to add on the image
-//        for i in 0...10 {x
-//            photoEditor.stickers.append(UIImage(named: i.description ?? "Text_here") )
-//        }
+        //        for i in 0...10 {x
+        //            photoEditor.stickers.append(UIImage(named: i.description ?? "Text_here") )
+        //        }
         
         //To hide controls - array of enum control
         //photoEditor.hiddenControls = [.crop, .draw, .share]
@@ -65,28 +65,58 @@ class ViewController: UIViewController {
         present(photoEditor, animated: true, completion: nil)
     }
     
- 
-    func uploadVideo(strUrl:String) {
-        //guard let path = Bundle.main.path(forResource: "Video", ofType: "mov") else { return }
-            let videoUrl = URL(fileURLWithPath: strUrl)
-            AWSS3Manager.shared.uploadVideo(videoUrl: videoUrl, progress: { [weak self] (progress) in
-                
-                guard let strongSelf = self else { return }
-                //strongSelf.progressView.progress = Float(progress)
-                
-            }) { [weak self] (uploadedFileUrl, error) in
-                
-                guard let strongSelf = self else { return }
-                if let finalPath = uploadedFileUrl as? String {
-                  //  strongSelf.s3UrlLabel.text = "Uploaded file url: " + finalPath
-                } else {
-                    print("\(String(describing: error?.localizedDescription))")
-                }
-            }
+    /*
+     Method: uploadVideoToFirebase
+     Description: Method to upload video to firebase storage folder
+     Params: localUrl:String
+     */
+    func uploadVideoToFirebase(localUrl:URL) {
+        self.uploadTOFireBaseVideo(url: localUrl) { result in
+            print("Video Upload Successfully")
+            let alert = UIAlertController(title: "Editor Task App", message: "Video Upload Successfully", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } failure: { error in
+            print(error.localizedDescription)
+            let alert = UIAlertController(title: "Editor Task App", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
+    /*
+     Method: uploadTOFireBaseVideo
+     Description: Method to upload TO Fire Base Video
+     Params: url: URL
+     */
+    func uploadTOFireBaseVideo(url: URL,
+                               success : @escaping (String) -> Void,
+                               failure : @escaping (Error) -> Void) {
+        
+        let name = "\(Int(Date().timeIntervalSince1970)).mov"
+        let path = NSTemporaryDirectory() + name
+        let data = NSData(contentsOf: url)
+        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        let storageRef = Storage.storage().reference().child("Videos").child(name)
+        if let uploadData = data as Data? {
+            let metaData = StorageMetadata()
+            metaData.contentType = "video/mov"
+            storageRef.putData(uploadData, metadata: metaData
+                               , completion: { (metadata, error) in
+                MBProgressHUD.hide(for: self.view, animated: true)
+                if let error = error {
+                    failure(error)
+                }else{
+                   // let strPic:String = (metadata?.downloadURL()?.absoluteString)!
+                    success("Upload Done")
+                }
+            })
+        }
+    }
+     
     // MARK: - IBAction Methods
- 
+    
     
     /*
      Method: onBtnEditPhoto
@@ -96,11 +126,11 @@ class ViewController: UIViewController {
         let picker = YPImagePicker()
         picker.didFinishPicking { [unowned picker] items, _ in
             if let photo = items.singlePhoto {
-//                print(photo.fromCamera) // Image source (camera or library)
-//                print(photo.image) // Final image selected by the user
-//                print(photo.originalImage) // original image selected by the user, unfiltered
-//                print(photo.modifiedImage) // Transformed image, can be nil
-//                print(photo.exifMeta) // Print exif meta data of original image.
+                //                print(photo.fromCamera) // Image source (camera or library)
+                //                print(photo.image) // Final image selected by the user
+                //                print(photo.originalImage) // original image selected by the user, unfiltered
+                //                print(photo.modifiedImage) // Transformed image, can be nil
+                //                print(photo.exifMeta) // Print exif meta data of original image.
                 self.ypImagePickerReturendImage = photo.image
                 
             }
@@ -122,18 +152,20 @@ class ViewController: UIViewController {
         var config = YPImagePickerConfiguration()
         config.screens = [.library, .video]
         config.library.mediaType = .video
-
+        
         let picker = YPImagePicker(configuration: config)
         picker.didFinishPicking { [unowned picker] items, _ in
             if let video = items.singleVideo {
-                print(video.fromCamera)
-                print(video.thumbnail)
-                print(video.url)
+                //                print(video.fromCamera)
+                //                print(video.thumbnail)
+                //                print(video.url)
+                self.uploadVideoToFirebase(localUrl: video.url)
             }
             picker.dismiss(animated: true, completion: nil)
         }
         present(picker, animated: true, completion: nil)
     }
+    
     
 }
 
@@ -160,7 +192,7 @@ class ImageSaver: NSObject {
     func writeToPhotoAlbum(image: UIImage) {
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(saveCompleted), nil)
     }
-
+    
     @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
         print("Save finished!")
     }
