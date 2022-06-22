@@ -10,11 +10,13 @@ import YPImagePicker
 import iOSPhotoEditor
 import FirebaseDatabase
 import FirebaseCore
-import FirebaseFirestore
 import FirebaseAuth
 import MBProgressHUD
 import FirebaseStorage
 import AVFoundation
+import Photos
+import Metal
+import MetalKit
 
 class ViewController: UIViewController {
     
@@ -51,16 +53,7 @@ class ViewController: UIViewController {
         let photoEditor = PhotoEditorViewController(nibName:"PhotoEditorViewController",bundle: Bundle(for: PhotoEditorViewController.self))
         photoEditor.photoEditorDelegate = self
         photoEditor.image = image
-        //Colors for drawing and Text, If not set default values will be used
-        //photoEditor.colors = [.red, .blue, .green]
         
-        //Stickers that the user will choose from to add on the image
-        //        for i in 0...10 {x
-        //            photoEditor.stickers.append(UIImage(named: i.description ?? "Text_here") )
-        //        }
-        
-        //To hide controls - array of enum control
-        //photoEditor.hiddenControls = [.crop, .draw, .share]
         photoEditor.modalPresentationStyle = UIModalPresentationStyle.currentContext //or .overFullScreen for transparency
         present(photoEditor, animated: true, completion: nil)
     }
@@ -108,13 +101,13 @@ class ViewController: UIViewController {
                 if let error = error {
                     failure(error)
                 }else{
-                   // let strPic:String = (metadata?.downloadURL()?.absoluteString)!
+                    // let strPic:String = (metadata?.downloadURL()?.absoluteString)!
                     success("Upload Done")
                 }
             })
         }
     }
-     
+    
     // MARK: - IBAction Methods
     
     
@@ -123,24 +116,18 @@ class ViewController: UIViewController {
      Description: IBAction for edit photo button
      */
     @IBAction func onBtnEditPhoto(_ sender:AnyObject) {
-        let picker = YPImagePicker()
-        picker.didFinishPicking { [unowned picker] items, _ in
-            if let photo = items.singlePhoto {
-                //                print(photo.fromCamera) // Image source (camera or library)
-                //                print(photo.image) // Final image selected by the user
-                //                print(photo.originalImage) // original image selected by the user, unfiltered
-                //                print(photo.modifiedImage) // Transformed image, can be nil
-                //                print(photo.exifMeta) // Print exif meta data of original image.
-                self.ypImagePickerReturendImage = photo.image
-                
+        
+        ImagePickerManager().pickImage(self){ image in
+            //here is the image
+            let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+            guard let editorController = mainStoryBoard.instantiateViewController(withIdentifier: "EditPhotoViewController") as? EditPhotoViewController else {
+                return
             }
-            picker.dismiss(animated: true) {
-                if let image = self.ypImagePickerReturendImage {
-                    self.openPhotoEditorViewController(image: image)
-                }
-            }
+            editorController.croppedImage = image
+            
+            self.navigationController?.pushViewController(editorController, animated: false)
         }
-        present(picker, animated: true, completion: nil)
+        
     }
     
     /*
@@ -197,3 +184,4 @@ class ImageSaver: NSObject {
         print("Save finished!")
     }
 }
+

@@ -17,20 +17,18 @@ import Foundation
 import FirebaseStorageInternal
 
 /**
- * An extended `StorageTask` providing observable semantics that can be used for responding to changes
- * in task state.
- * Observers produce a `StorageHandle`, which is used to keep track of and remove specific
+ * Extends FIRStorageTask to provide observable semantics such as adding and removing observers.
+ * Observers produce a FIRStorageHandle, which is used to keep track of and remove specific
  * observers at a later date.
- * This class is not thread safe and can only be called on the main thread.
+ * This class is currently not thread safe and can only be called on the main thread.
  */
 @objc(FIRStorageObservableTask) open class StorageObservableTask: StorageTask {
   /**
    * Observes changes in the upload status: Resume, Pause, Progress, Success, and Failure.
-   * - Parameters:
-   *   - status: The `StorageTaskStatus` change to observe.
-   *   - handler: A callback that fires every time the status event occurs,
-   *        containing a `StorageTaskSnapshot` describing task state.
-   * - Returns: A task handle that can be used to remove the observer at a later date.
+   * @param status The StorageTaskStatus change to observe.
+   * @param handler A callback that fires every time the status event occurs,
+   * returns a StorageTaskSnapshot containing the state of the task.
+   * @return A task handle that can be used to remove the observer at a later date.
    */
   @objc(observeStatus:handler:) @discardableResult
   open func observe(_ status: StorageTaskStatus,
@@ -41,9 +39,12 @@ import FirebaseStorageInternal
       }
   }
 
+//  - (FIRStorageHandle)observeStatus:(FIRIMPLStorageTaskStatus)status
+//                            handler:(void (^)(FIRIMPLStorageTaskSnapshot *snapshot))handler;
+
   /**
    * Removes the single observer with the provided handle.
-   * - Parameter handle The handle of the task to remove.
+   * @param handle The handle of the task to remove.
    */
   @objc(removeObserverWithHandle:) open func removeObserver(withHandle handle: String) {
     (impl as! FIRIMPLStorageObservableTask).removeObserver(withHandle: handle)
@@ -51,7 +52,7 @@ import FirebaseStorageInternal
 
   /**
    * Removes all observers for a single status.
-   * - Parameter status A `StorageTaskStatus` to remove all listeners for.
+   * @param status A StorageTaskStatus to remove listeners for.
    */
   @objc(removeAllObserversForStatus:)
   open func removeAllObservers(for status: StorageTaskStatus) {

@@ -17,12 +17,12 @@ import Foundation
 import FirebaseStorageInternal
 
 /**
- * A superclass to all Storage tasks, including `StorageUploadTask`
- * and `StorageDownloadTask`, to provide state transitions, event raising, and common storage
- * for metadata and errors.
- * Callbacks are always fired on the developer-specified callback queue.
- * If no queue is specified, it defaults to the main queue.
- * This class is not thread safe, so only call methods on the main thread.
+ * A superclass to all Storage*Tasks, including StorageUploadTask
+ * and StorageDownloadTask, to provide state transitions, event raising, and common storage
+ * or metadata and errors.
+ * Callbacks are always fired on the developer specified callback queue.
+ * If no queue is specified by the developer, it defaults to the main queue.
+ * Currently not thread safe, so only call methods on the main thread.
  */
 @objc(FIRStorageTask) open class StorageTask: NSObject {
   /**
@@ -59,12 +59,12 @@ import FirebaseStorageInternal
   @objc optional func pause() -> Void
 
   /**
-   * Cancels a task.
+   * Pauses a task currently in progress.
    */
   @objc optional func cancel() -> Void
 
   /**
-   * Resumes a paused task.
+   * Pauses a task currently in progress.
    */
   @objc optional func resume() -> Void
 }

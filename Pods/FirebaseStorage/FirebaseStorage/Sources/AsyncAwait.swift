@@ -25,8 +25,6 @@ import Foundation
     /// - Parameters:
     ///   - size: The maximum size in bytes to download. If the download exceeds this size,
     ///           the task will be cancelled and an error will be thrown.
-    /// - Throws:
-    ///   - An error if the operation failed, for example if the data exceeded `maxSize`.
     /// - Returns: Data object.
     func data(maxSize: Int64) async throws -> Data {
       return try await withCheckedThrowingContinuation { continuation in
@@ -45,8 +43,6 @@ import Foundation
     ///   - uploadData: The Data to upload.
     ///   - metadata: Optional StorageMetadata containing additional information (MIME type, etc.)
     ///              about the object being uploaded.
-    /// - Throws:
-    ///   - An error if the operation failed, for example if Storage was unreachable.
     /// - Returns: StorageMetadata with additional information about the object being uploaded.
     func putDataAsync(_ uploadData: Data,
                       metadata: StorageMetadata? = nil) async throws -> StorageMetadata {
@@ -64,9 +60,7 @@ import Foundation
     ///   - url: A URL representing the system file path of the object to be uploaded.
     ///   - metadata: Optional StorageMetadata containing additional information (MIME type, etc.)
     ///              about the object being uploaded.
-    /// - Throws:
-    ///   - An error if the operation failed, for example if no file was present at the specified `url`.
-    /// - Returns: `StorageMetadata` with additional information about the object being uploaded.
+    /// - Returns: StorageMetadata with additional information about the object being uploaded.
     func putFileAsync(from url: URL,
                       metadata: StorageMetadata? = nil) async throws -> StorageMetadata {
       return try await withCheckedThrowingContinuation { continuation in
@@ -81,10 +75,7 @@ import Foundation
     ///
     /// - Parameters:
     ///   - fileUrl: A URL representing the system file path of the object to be uploaded.
-    /// - Throws:
-    ///   - An error if the operation failed, for example if Storage was unreachable
-    ///   or `fileURL` did not reference a valid path on disk.
-    /// - Returns: A `URL` pointing to the file path of the downloaded file.
+    /// - Returns: URL pointing to the file path of the downloaded file.
     func writeAsync(toFile fileURL: URL) async throws -> URL {
       return try await withCheckedThrowingContinuation { continuation in
         // TODO: Use task to handle progress and cancellation.
@@ -105,11 +96,8 @@ import Foundation
     /// - Parameters:
     ///   - maxResults The maximum number of results to return in a single page. Must be
     ///                greater than 0 and at most 1000.
-    /// - Throws:
-    ///   - An error if the operation failed, for example if Storage was unreachable
-    ///   or the storage reference referenced an invalid path.
     /// - Returns:
-    ///   - A `StorageListResult` containing the contents of the storage reference.
+    ///   - completion A `Result` enum with either the list or an `Error`.
     func list(maxResults: Int64) async throws -> StorageListResult {
       typealias ListContinuation = CheckedContinuation<StorageListResult, Error>
       return try await withCheckedThrowingContinuation { (continuation: ListContinuation) in
@@ -131,9 +119,6 @@ import Foundation
     ///   - maxResults The maximum number of results to return in a single page. Must be
     ///                greater than 0 and at most 1000.
     ///   - pageToken A page token from a previous call to list.
-    /// - Throws:
-    ///   - An error if the operation failed, for example if Storage was unreachable
-    ///   or the storage reference referenced an invalid path.
     /// - Returns:
     ///   - completion A `Result` enum with either the list or an `Error`.
     func list(maxResults: Int64, pageToken: String) async throws -> StorageListResult {

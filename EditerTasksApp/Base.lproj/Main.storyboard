@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="haP-X3-bJ5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="haP-X3-bJ5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -77,6 +77,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8NV-Rj-mzz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
+        </scene>
+        <!--Edit Photo View Controller-->
+        <scene sceneID="Y2G-YP-HsN">
+            <objects>
+                <viewController storyboardIdentifier="EditPhotoViewController" id="8cg-Dm-XeR" customClass="EditPhotoViewController" customModule="EditerTasksApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cdg-es-PoK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2xs-Sb-JeW" userLabel="Preview View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="414"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="2xs-Sb-JeW" secondAttribute="height" multiplier="1:1" id="8aT-y2-aK4"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U7U-MQ-5jK" userLabel="Filters View">
+                                <rect key="frame" x="0.0" y="458" width="414" height="360"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-Hb-IG2" userLabel="Toobar View">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP7-Fd-MVS" userLabel="Filter Button">
+                                        <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Filter">
+                                            <color key="titleColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="filterButtonTapped:" destination="8cg-Dm-XeR" eventType="touchUpInside" id="van-RP-Eoa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08d-BI-dgh" userLabel="Edit Button">
+                                        <rect key="frame" x="207" y="0.0" width="207" height="44"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Edit">
+                                            <color key="titleColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="editButtonTapped:" destination="8cg-Dm-XeR" eventType="touchUpInside" id="pCx-aI-3dc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="08d-BI-dgh" firstAttribute="leading" secondItem="oP7-Fd-MVS" secondAttribute="trailing" id="3HB-E0-CRu"/>
+                                    <constraint firstAttribute="trailing" secondItem="08d-BI-dgh" secondAttribute="trailing" id="Fol-67-TW5"/>
+                                    <constraint firstItem="oP7-Fd-MVS" firstAttribute="top" secondItem="1lA-Hb-IG2" secondAttribute="top" id="IjC-ZR-aAh"/>
+                                    <constraint firstItem="oP7-Fd-MVS" firstAttribute="width" secondItem="1lA-Hb-IG2" secondAttribute="width" multiplier="0.5" id="RgL-ZS-ltl"/>
+                                    <constraint firstItem="08d-BI-dgh" firstAttribute="width" secondItem="1lA-Hb-IG2" secondAttribute="width" multiplier="0.5" id="UZ5-1m-mMG"/>
+                                    <constraint firstItem="08d-BI-dgh" firstAttribute="top" secondItem="1lA-Hb-IG2" secondAttribute="top" id="XNl-ta-noS"/>
+                                    <constraint firstAttribute="bottom" secondItem="08d-BI-dgh" secondAttribute="bottom" id="ia7-4H-STC"/>
+                                    <constraint firstItem="oP7-Fd-MVS" firstAttribute="leading" secondItem="1lA-Hb-IG2" secondAttribute="leading" id="jNY-9T-Rzj"/>
+                                    <constraint firstAttribute="bottom" secondItem="oP7-Fd-MVS" secondAttribute="bottom" id="tQC-sH-0mm"/>
+                                    <constraint firstAttribute="height" constant="44" id="y90-Cc-jAy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dB7-e3-yVa"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="U7U-MQ-5jK" firstAttribute="top" secondItem="2xs-Sb-JeW" secondAttribute="bottom" id="2d7-QK-Nlc"/>
+                            <constraint firstItem="dB7-e3-yVa" firstAttribute="trailing" secondItem="1lA-Hb-IG2" secondAttribute="trailing" id="EZj-3b-8Kc"/>
+                            <constraint firstItem="1lA-Hb-IG2" firstAttribute="top" secondItem="U7U-MQ-5jK" secondAttribute="bottom" id="OaU-CJ-3k2"/>
+                            <constraint firstItem="dB7-e3-yVa" firstAttribute="trailing" secondItem="2xs-Sb-JeW" secondAttribute="trailing" id="ZCn-30-Bsp"/>
+                            <constraint firstItem="2xs-Sb-JeW" firstAttribute="leading" secondItem="dB7-e3-yVa" secondAttribute="leading" id="bgA-XX-irQ"/>
+                            <constraint firstItem="dB7-e3-yVa" firstAttribute="bottom" secondItem="1lA-Hb-IG2" secondAttribute="bottom" id="dGo-xN-q58"/>
+                            <constraint firstItem="1lA-Hb-IG2" firstAttribute="leading" secondItem="dB7-e3-yVa" secondAttribute="leading" id="iyf-bX-U4m"/>
+                            <constraint firstItem="2xs-Sb-JeW" firstAttribute="top" secondItem="dB7-e3-yVa" secondAttribute="top" id="na1-hR-g3p"/>
+                            <constraint firstItem="U7U-MQ-5jK" firstAttribute="leading" secondItem="dB7-e3-yVa" secondAttribute="leading" id="rjc-aI-0sm"/>
+                            <constraint firstItem="dB7-e3-yVa" firstAttribute="trailing" secondItem="U7U-MQ-5jK" secondAttribute="trailing" id="xZM-kV-lbe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="24D-sL-ZXl"/>
+                    <connections>
+                        <outlet property="editButton" destination="08d-BI-dgh" id="oKQ-wa-Ntz"/>
+                        <outlet property="filterButton" destination="oP7-Fd-MVS" id="efN-iH-Ioi"/>
+                        <outlet property="filtersView" destination="U7U-MQ-5jK" id="PTM-HR-r1W"/>
+                        <outlet property="previewView" destination="2xs-Sb-JeW" id="WyY-dd-fuI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f1d-dt-TI3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="98"/>
         </scene>
     </scenes>
     <resources>

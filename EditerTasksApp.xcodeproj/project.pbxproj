@@ -7,37 +7,127 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D831C3D2B1FE05E230A8BD8 /* Pods_EditerTasksApp_EditerTasksAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3DEA9CE4ED22B60B14C8A3 /* Pods_EditerTasksApp_EditerTasksAppUITests.framework */; };
 		45A203922861AD42001DAB82 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45A203912861AD42001DAB82 /* GoogleService-Info.plist */; };
+		52795C4428633EE200F4FCB1 /* ImagePickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C4328633EE200F4FCB1 /* ImagePickerManager.swift */; };
+		52795C48286341D300F4FCB1 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C47286341D300F4FCB1 /* EditPhotoViewController.swift */; };
+		52795C4D286344CF00F4FCB1 /* FilterToolItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C4C286344CE00F4FCB1 /* FilterToolItem.swift */; };
+		52795C5F286344F700F4FCB1 /* MTFilterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C4F286344F600F4FCB1 /* MTFilterGroup.swift */; };
+		52795C60286344F700F4FCB1 /* MTAntiLuxFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C50286344F600F4FCB1 /* MTAntiLuxFilter.swift */; };
+		52795C61286344F700F4FCB1 /* MTLocalLaplacianFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795C51286344F600F4FCB1 /* MTLocalLaplacianFilter.metal */; };
+		52795C62286344F700F4FCB1 /* MTImageOverlayFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C52286344F600F4FCB1 /* MTImageOverlayFilter.swift */; };
+		52795C63286344F700F4FCB1 /* MTFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C53286344F600F4FCB1 /* MTFilter.swift */; };
+		52795C64286344F700F4FCB1 /* MTFilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C54286344F600F4FCB1 /* MTFilterManager.swift */; };
+		52795C65286344F700F4FCB1 /* MTTintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C55286344F600F4FCB1 /* MTTintColor.swift */; };
+		52795C66286344F700F4FCB1 /* MTLuxBlendFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C56286344F600F4FCB1 /* MTLuxBlendFilter.swift */; };
+		52795C67286344F700F4FCB1 /* MTBasicAdjustFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795C57286344F600F4FCB1 /* MTBasicAdjustFilter.metal */; };
+		52795C68286344F700F4FCB1 /* MTStarlightFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795C58286344F600F4FCB1 /* MTStarlightFilter.metal */; };
+		52795C69286344F700F4FCB1 /* MTAntiLuxFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795C59286344F600F4FCB1 /* MTAntiLuxFilter.metal */; };
+		52795C6A286344F700F4FCB1 /* MTImageOverlayFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795C5A286344F600F4FCB1 /* MTImageOverlayFilter.metal */; };
+		52795C6B286344F700F4FCB1 /* MTLocalLaplacianFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C5B286344F600F4FCB1 /* MTLocalLaplacianFilter.swift */; };
+		52795C6C286344F700F4FCB1 /* MTStarlightFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C5C286344F600F4FCB1 /* MTStarlightFilter.swift */; };
+		52795C6D286344F700F4FCB1 /* MTLuxBlendFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795C5D286344F600F4FCB1 /* MTLuxBlendFilter.metal */; };
+		52795C6E286344F700F4FCB1 /* MTBasicAdjustFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C5E286344F700F4FCB1 /* MTBasicAdjustFilter.swift */; };
+		52795C712863450300F4FCB1 /* UIView+SafeArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C702863450300F4FCB1 /* UIView+SafeArea.swift */; };
+		52795C73286345FD00F4FCB1 /* FilterAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 52795C72286345FD00F4FCB1 /* FilterAssets.bundle */; };
+		52795C7E2863474300F4FCB1 /* HorizontalSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C752863474300F4FCB1 /* HorizontalSliderView.swift */; };
+		52795C7F2863474300F4FCB1 /* AlbumPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C762863474300F4FCB1 /* AlbumPhotoCell.swift */; };
+		52795C802863474300F4FCB1 /* MTGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C772863474300F4FCB1 /* MTGridView.swift */; };
+		52795C812863474300F4FCB1 /* FilterTintColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C782863474300F4FCB1 /* FilterTintColorPicker.swift */; };
+		52795C822863474300F4FCB1 /* MTScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C792863474300F4FCB1 /* MTScrollView.swift */; };
+		52795C832863474300F4FCB1 /* FilterPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C7A2863474300F4FCB1 /* FilterPickerCell.swift */; };
+		52795C842863474300F4FCB1 /* FilterControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C7B2863474300F4FCB1 /* FilterControlView.swift */; };
+		52795C852863474300F4FCB1 /* FilterTintColorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C7C2863474300F4FCB1 /* FilterTintColorControl.swift */; };
+		52795C862863474300F4FCB1 /* ToolPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795C7D2863474300F4FCB1 /* ToolPickerCell.swift */; };
+		52795E0A2863B7A600F4FCB1 /* MTInkwellFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DB72863B7A600F4FCB1 /* MTInkwellFilter.swift */; };
+		52795E0B2863B7A600F4FCB1 /* MTCremaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DB82863B7A600F4FCB1 /* MTCremaFilter.metal */; };
+		52795E0C2863B7A600F4FCB1 /* MTJunoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DB92863B7A600F4FCB1 /* MTJunoFilter.metal */; };
+		52795E0D2863B7A600F4FCB1 /* MTEarlybirdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DBA2863B7A600F4FCB1 /* MTEarlybirdFilter.swift */; };
+		52795E0E2863B7A600F4FCB1 /* MTSutroFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DBB2863B7A600F4FCB1 /* MTSutroFilter.metal */; };
+		52795E0F2863B7A600F4FCB1 /* MTHelenaVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DBC2863B7A600F4FCB1 /* MTHelenaVideoFilter.metal */; };
+		52795E102863B7A600F4FCB1 /* MTMavenVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DBD2863B7A600F4FCB1 /* MTMavenVideoFilter.swift */; };
+		52795E112863B7A600F4FCB1 /* MTGinzaVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DBE2863B7A600F4FCB1 /* MTGinzaVideoFilter.metal */; };
+		52795E122863B7A600F4FCB1 /* MTClarendonVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DBF2863B7A600F4FCB1 /* MTClarendonVideoFilter.metal */; };
+		52795E132863B7A600F4FCB1 /* MTLarkFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC02863B7A600F4FCB1 /* MTLarkFilter.swift */; };
+		52795E142863B7A600F4FCB1 /* MTAmaroFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC12863B7A600F4FCB1 /* MTAmaroFilter.swift */; };
+		52795E152863B7A600F4FCB1 /* MTStinsonVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC22863B7A600F4FCB1 /* MTStinsonVideoFilter.metal */; };
+		52795E162863B7A600F4FCB1 /* MTGinghamVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC32863B7A600F4FCB1 /* MTGinghamVideoFilter.swift */; };
+		52795E172863B7A600F4FCB1 /* MTToasterFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC42863B7A600F4FCB1 /* MTToasterFilter.metal */; };
+		52795E182863B7A600F4FCB1 /* MTPerpetuaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC52863B7A600F4FCB1 /* MTPerpetuaFilter.swift */; };
+		52795E192863B7A600F4FCB1 /* MTVesperVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC62863B7A600F4FCB1 /* MTVesperVideoFilter.metal */; };
+		52795E1A2863B7A600F4FCB1 /* MTBrooklynVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC72863B7A600F4FCB1 /* MTBrooklynVideoFilter.swift */; };
+		52795E1B2863B7A600F4FCB1 /* MTBrannanFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC82863B7A600F4FCB1 /* MTBrannanFilter.swift */; };
+		52795E1C2863B7A600F4FCB1 /* MTSkylineVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DC92863B7A600F4FCB1 /* MTSkylineVideoFilter.metal */; };
+		52795E1D2863B7A600F4FCB1 /* MTCharmesVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DCA2863B7A600F4FCB1 /* MTCharmesVideoFilter.metal */; };
+		52795E1E2863B7A600F4FCB1 /* MTAdenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DCB2863B7A600F4FCB1 /* MTAdenFilter.swift */; };
+		52795E1F2863B7A600F4FCB1 /* MTSierraFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DCC2863B7A600F4FCB1 /* MTSierraFilter.swift */; };
+		52795E202863B7A600F4FCB1 /* MTDogpatchVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DCE2863B7A600F4FCB1 /* MTDogpatchVideoFilter.swift */; };
+		52795E212863B7A700F4FCB1 /* MTHudsonFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DCF2863B7A600F4FCB1 /* MTHudsonFilter.swift */; };
+		52795E222863B7A700F4FCB1 /* MTLudwigFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD02863B7A600F4FCB1 /* MTLudwigFilter.swift */; };
+		52795E232863B7A700F4FCB1 /* MTAshbyVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD12863B7A600F4FCB1 /* MTAshbyVideoFilter.metal */; };
+		52795E242863B7A700F4FCB1 /* MTWillowFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD22863B7A600F4FCB1 /* MTWillowFilter.swift */; };
+		52795E252863B7A700F4FCB1 /* MTKelvinFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD32863B7A600F4FCB1 /* MTKelvinFilter.metal */; };
+		52795E262863B7A700F4FCB1 /* MTMoonVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD42863B7A600F4FCB1 /* MTMoonVideoFilter.metal */; };
+		52795E272863B7A700F4FCB1 /* MTSlumberFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD52863B7A600F4FCB1 /* MTSlumberFilter.metal */; };
+		52795E282863B7A700F4FCB1 /* MTValenciaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD62863B7A600F4FCB1 /* MTValenciaFilter.swift */; };
+		52795E292863B7A700F4FCB1 /* MT1977Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD72863B7A600F4FCB1 /* MT1977Filter.swift */; };
+		52795E2A2863B7A700F4FCB1 /* MTWaldenFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD82863B7A600F4FCB1 /* MTWaldenFilter.metal */; };
+		52795E2B2863B7A700F4FCB1 /* MTNormalFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DD92863B7A600F4FCB1 /* MTNormalFilter.metal */; };
+		52795E2C2863B7A700F4FCB1 /* MTXpro2Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DDA2863B7A600F4FCB1 /* MTXpro2Filter.swift */; };
+		52795E2D2863B7A700F4FCB1 /* MTRiseFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DDB2863B7A600F4FCB1 /* MTRiseFilter.metal */; };
+		52795E2E2863B7A700F4FCB1 /* MTNashvilleFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DDC2863B7A600F4FCB1 /* MTNashvilleFilter.swift */; };
+		52795E2F2863B7A700F4FCB1 /* MTHefeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DDD2863B7A600F4FCB1 /* MTHefeFilter.metal */; };
+		52795E302863B7A700F4FCB1 /* MTLoFiFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DDE2863B7A600F4FCB1 /* MTLoFiFilter.metal */; };
+		52795E312863B7A700F4FCB1 /* MTReyesFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DDF2863B7A600F4FCB1 /* MTReyesFilter.metal */; };
+		52795E322863B7A700F4FCB1 /* MTMayfairFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE02863B7A600F4FCB1 /* MTMayfairFilter.metal */; };
+		52795E332863B7A700F4FCB1 /* MTLarkFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE12863B7A600F4FCB1 /* MTLarkFilter.metal */; };
+		52795E342863B7A700F4FCB1 /* MTAmaroFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE22863B7A600F4FCB1 /* MTAmaroFilter.metal */; };
+		52795E352863B7A700F4FCB1 /* MTStinsonVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE32863B7A600F4FCB1 /* MTStinsonVideoFilter.swift */; };
+		52795E362863B7A700F4FCB1 /* MTGinghamVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE42863B7A600F4FCB1 /* MTGinghamVideoFilter.metal */; };
+		52795E372863B7A700F4FCB1 /* MTToasterFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE52863B7A600F4FCB1 /* MTToasterFilter.swift */; };
+		52795E382863B7A700F4FCB1 /* MTPerpetuaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE62863B7A600F4FCB1 /* MTPerpetuaFilter.metal */; };
+		52795E392863B7A700F4FCB1 /* MTVesperVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE72863B7A600F4FCB1 /* MTVesperVideoFilter.swift */; };
+		52795E3A2863B7A700F4FCB1 /* MTClarendonVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE82863B7A600F4FCB1 /* MTClarendonVideoFilter.swift */; };
+		52795E3B2863B7A700F4FCB1 /* MTJunoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DE92863B7A600F4FCB1 /* MTJunoFilter.swift */; };
+		52795E3C2863B7A700F4FCB1 /* MTEarlybirdFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DEA2863B7A600F4FCB1 /* MTEarlybirdFilter.metal */; };
+		52795E3D2863B7A700F4FCB1 /* MTSutroFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DEB2863B7A600F4FCB1 /* MTSutroFilter.swift */; };
+		52795E3E2863B7A700F4FCB1 /* MTHelenaVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DEC2863B7A600F4FCB1 /* MTHelenaVideoFilter.swift */; };
+		52795E3F2863B7A700F4FCB1 /* MTMavenVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DED2863B7A600F4FCB1 /* MTMavenVideoFilter.metal */; };
+		52795E402863B7A700F4FCB1 /* MTGinzaVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DEE2863B7A600F4FCB1 /* MTGinzaVideoFilter.swift */; };
+		52795E412863B7A700F4FCB1 /* MTInkwellFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DEF2863B7A600F4FCB1 /* MTInkwellFilter.metal */; };
+		52795E422863B7A700F4FCB1 /* MTCremaFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF02863B7A600F4FCB1 /* MTCremaFilter.swift */; };
+		52795E432863B7A700F4FCB1 /* MTLudwigFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF12863B7A600F4FCB1 /* MTLudwigFilter.metal */; };
+		52795E442863B7A700F4FCB1 /* MTDogpatchVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF22863B7A600F4FCB1 /* MTDogpatchVideoFilter.metal */; };
+		52795E452863B7A700F4FCB1 /* MTHudsonFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF32863B7A600F4FCB1 /* MTHudsonFilter.metal */; };
+		52795E462863B7A700F4FCB1 /* MTBrannanFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF42863B7A600F4FCB1 /* MTBrannanFilter.metal */; };
+		52795E472863B7A700F4FCB1 /* MTCharmesVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF52863B7A600F4FCB1 /* MTCharmesVideoFilter.swift */; };
+		52795E482863B7A700F4FCB1 /* MTSkylineVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF62863B7A600F4FCB1 /* MTSkylineVideoFilter.swift */; };
+		52795E492863B7A700F4FCB1 /* MTAdenFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF72863B7A600F4FCB1 /* MTAdenFilter.metal */; };
+		52795E4A2863B7A700F4FCB1 /* MTSierraFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF82863B7A600F4FCB1 /* MTSierraFilter.metal */; };
+		52795E4B2863B7A700F4FCB1 /* MTBrooklynVideoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DF92863B7A600F4FCB1 /* MTBrooklynVideoFilter.metal */; };
+		52795E4C2863B7A700F4FCB1 /* MT1977Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DFA2863B7A600F4FCB1 /* MT1977Filter.metal */; };
+		52795E4D2863B7A700F4FCB1 /* MTSlumberFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DFB2863B7A600F4FCB1 /* MTSlumberFilter.swift */; };
+		52795E4E2863B7A700F4FCB1 /* MTValenciaFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DFC2863B7A600F4FCB1 /* MTValenciaFilter.metal */; };
+		52795E4F2863B7A700F4FCB1 /* MTAshbyVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DFD2863B7A600F4FCB1 /* MTAshbyVideoFilter.swift */; };
+		52795E502863B7A700F4FCB1 /* MTWillowFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795DFE2863B7A600F4FCB1 /* MTWillowFilter.metal */; };
+		52795E512863B7A700F4FCB1 /* MTKelvinFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795DFF2863B7A600F4FCB1 /* MTKelvinFilter.swift */; };
+		52795E522863B7A700F4FCB1 /* MTMoonVideoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E002863B7A600F4FCB1 /* MTMoonVideoFilter.swift */; };
+		52795E532863B7A700F4FCB1 /* MTReyesFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E012863B7A600F4FCB1 /* MTReyesFilter.swift */; };
+		52795E542863B7A700F4FCB1 /* MTMayfairFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E022863B7A600F4FCB1 /* MTMayfairFilter.swift */; };
+		52795E552863B7A700F4FCB1 /* MTHefeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E032863B7A600F4FCB1 /* MTHefeFilter.swift */; };
+		52795E562863B7A700F4FCB1 /* MTLoFiFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E042863B7A600F4FCB1 /* MTLoFiFilter.swift */; };
+		52795E572863B7A700F4FCB1 /* MTNashvilleFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795E052863B7A600F4FCB1 /* MTNashvilleFilter.metal */; };
+		52795E582863B7A700F4FCB1 /* MTWaldenFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E062863B7A600F4FCB1 /* MTWaldenFilter.swift */; };
+		52795E592863B7A700F4FCB1 /* MTNormalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E072863B7A600F4FCB1 /* MTNormalFilter.swift */; };
+		52795E5A2863B7A700F4FCB1 /* MTXpro2Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 52795E082863B7A600F4FCB1 /* MTXpro2Filter.metal */; };
+		52795E5B2863B7A700F4FCB1 /* MTRiseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52795E092863B7A600F4FCB1 /* MTRiseFilter.swift */; };
 		6F4FD813FFB9F464F8DFEE8A /* Pods_EditerTasksApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CDC1D0DF3F616970D64103 /* Pods_EditerTasksApp.framework */; };
-		9C075D6203432533E419C0CF /* Pods_EditerTasksAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 107565F7B3A98C8AD0BA5C7A /* Pods_EditerTasksAppTests.framework */; };
 		F7C042F9285C4E47008F940F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C042F8285C4E47008F940F /* AppDelegate.swift */; };
 		F7C042FB285C4E47008F940F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C042FA285C4E47008F940F /* SceneDelegate.swift */; };
 		F7C042FD285C4E47008F940F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C042FC285C4E47008F940F /* ViewController.swift */; };
 		F7C04300285C4E47008F940F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C042FE285C4E47008F940F /* Main.storyboard */; };
 		F7C04302285C4E49008F940F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7C04301285C4E49008F940F /* Assets.xcassets */; };
 		F7C04305285C4E49008F940F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7C04303285C4E49008F940F /* LaunchScreen.storyboard */; };
-		F7C04310285C4E49008F940F /* EditerTasksAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0430F285C4E49008F940F /* EditerTasksAppTests.swift */; };
-		F7C0431A285C4E49008F940F /* EditerTasksAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C04319285C4E49008F940F /* EditerTasksAppUITests.swift */; };
-		F7C0431C285C4E49008F940F /* EditerTasksAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0431B285C4E49008F940F /* EditerTasksAppUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F7C0430C285C4E49008F940F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7C042ED285C4E47008F940F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7C042F4285C4E47008F940F;
-			remoteInfo = EditerTasksApp;
-		};
-		F7C04316285C4E49008F940F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F7C042ED285C4E47008F940F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F7C042F4285C4E47008F940F;
-			remoteInfo = EditerTasksApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		107565F7B3A98C8AD0BA5C7A /* Pods_EditerTasksAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EditerTasksAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +135,120 @@
 		45A203912861AD42001DAB82 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		480645C9FAD8DE89460CD45E /* Pods-EditerTasksApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EditerTasksApp.release.xcconfig"; path = "Target Support Files/Pods-EditerTasksApp/Pods-EditerTasksApp.release.xcconfig"; sourceTree = "<group>"; };
 		51CDC1D0DF3F616970D64103 /* Pods_EditerTasksApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EditerTasksApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52795C4328633EE200F4FCB1 /* ImagePickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerManager.swift; sourceTree = "<group>"; };
+		52795C47286341D300F4FCB1 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		52795C4C286344CE00F4FCB1 /* FilterToolItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterToolItem.swift; sourceTree = "<group>"; };
+		52795C4F286344F600F4FCB1 /* MTFilterGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTFilterGroup.swift; sourceTree = "<group>"; };
+		52795C50286344F600F4FCB1 /* MTAntiLuxFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAntiLuxFilter.swift; sourceTree = "<group>"; };
+		52795C51286344F600F4FCB1 /* MTLocalLaplacianFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLocalLaplacianFilter.metal; sourceTree = "<group>"; };
+		52795C52286344F600F4FCB1 /* MTImageOverlayFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTImageOverlayFilter.swift; sourceTree = "<group>"; };
+		52795C53286344F600F4FCB1 /* MTFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTFilter.swift; sourceTree = "<group>"; };
+		52795C54286344F600F4FCB1 /* MTFilterManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTFilterManager.swift; sourceTree = "<group>"; };
+		52795C55286344F600F4FCB1 /* MTTintColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTTintColor.swift; sourceTree = "<group>"; };
+		52795C56286344F600F4FCB1 /* MTLuxBlendFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLuxBlendFilter.swift; sourceTree = "<group>"; };
+		52795C57286344F600F4FCB1 /* MTBasicAdjustFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTBasicAdjustFilter.metal; sourceTree = "<group>"; };
+		52795C58286344F600F4FCB1 /* MTStarlightFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTStarlightFilter.metal; sourceTree = "<group>"; };
+		52795C59286344F600F4FCB1 /* MTAntiLuxFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAntiLuxFilter.metal; sourceTree = "<group>"; };
+		52795C5A286344F600F4FCB1 /* MTImageOverlayFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTImageOverlayFilter.metal; sourceTree = "<group>"; };
+		52795C5B286344F600F4FCB1 /* MTLocalLaplacianFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLocalLaplacianFilter.swift; sourceTree = "<group>"; };
+		52795C5C286344F600F4FCB1 /* MTStarlightFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTStarlightFilter.swift; sourceTree = "<group>"; };
+		52795C5D286344F600F4FCB1 /* MTLuxBlendFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLuxBlendFilter.metal; sourceTree = "<group>"; };
+		52795C5E286344F700F4FCB1 /* MTBasicAdjustFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBasicAdjustFilter.swift; sourceTree = "<group>"; };
+		52795C702863450300F4FCB1 /* UIView+SafeArea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+SafeArea.swift"; sourceTree = "<group>"; };
+		52795C72286345FD00F4FCB1 /* FilterAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FilterAssets.bundle; sourceTree = "<group>"; };
+		52795C752863474300F4FCB1 /* HorizontalSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSliderView.swift; sourceTree = "<group>"; };
+		52795C762863474300F4FCB1 /* AlbumPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumPhotoCell.swift; sourceTree = "<group>"; };
+		52795C772863474300F4FCB1 /* MTGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTGridView.swift; sourceTree = "<group>"; };
+		52795C782863474300F4FCB1 /* FilterTintColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTintColorPicker.swift; sourceTree = "<group>"; };
+		52795C792863474300F4FCB1 /* MTScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTScrollView.swift; sourceTree = "<group>"; };
+		52795C7A2863474300F4FCB1 /* FilterPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterPickerCell.swift; sourceTree = "<group>"; };
+		52795C7B2863474300F4FCB1 /* FilterControlView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterControlView.swift; sourceTree = "<group>"; };
+		52795C7C2863474300F4FCB1 /* FilterTintColorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTintColorControl.swift; sourceTree = "<group>"; };
+		52795C7D2863474300F4FCB1 /* ToolPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolPickerCell.swift; sourceTree = "<group>"; };
+		52795C8728635B2D00F4FCB1 /* MetalPetal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MetalPetal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52795DB72863B7A600F4FCB1 /* MTInkwellFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTInkwellFilter.swift; sourceTree = "<group>"; };
+		52795DB82863B7A600F4FCB1 /* MTCremaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTCremaFilter.metal; sourceTree = "<group>"; };
+		52795DB92863B7A600F4FCB1 /* MTJunoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTJunoFilter.metal; sourceTree = "<group>"; };
+		52795DBA2863B7A600F4FCB1 /* MTEarlybirdFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTEarlybirdFilter.swift; sourceTree = "<group>"; };
+		52795DBB2863B7A600F4FCB1 /* MTSutroFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSutroFilter.metal; sourceTree = "<group>"; };
+		52795DBC2863B7A600F4FCB1 /* MTHelenaVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTHelenaVideoFilter.metal; sourceTree = "<group>"; };
+		52795DBD2863B7A600F4FCB1 /* MTMavenVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMavenVideoFilter.swift; sourceTree = "<group>"; };
+		52795DBE2863B7A600F4FCB1 /* MTGinzaVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTGinzaVideoFilter.metal; sourceTree = "<group>"; };
+		52795DBF2863B7A600F4FCB1 /* MTClarendonVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTClarendonVideoFilter.metal; sourceTree = "<group>"; };
+		52795DC02863B7A600F4FCB1 /* MTLarkFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLarkFilter.swift; sourceTree = "<group>"; };
+		52795DC12863B7A600F4FCB1 /* MTAmaroFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAmaroFilter.swift; sourceTree = "<group>"; };
+		52795DC22863B7A600F4FCB1 /* MTStinsonVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTStinsonVideoFilter.metal; sourceTree = "<group>"; };
+		52795DC32863B7A600F4FCB1 /* MTGinghamVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTGinghamVideoFilter.swift; sourceTree = "<group>"; };
+		52795DC42863B7A600F4FCB1 /* MTToasterFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTToasterFilter.metal; sourceTree = "<group>"; };
+		52795DC52863B7A600F4FCB1 /* MTPerpetuaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTPerpetuaFilter.swift; sourceTree = "<group>"; };
+		52795DC62863B7A600F4FCB1 /* MTVesperVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTVesperVideoFilter.metal; sourceTree = "<group>"; };
+		52795DC72863B7A600F4FCB1 /* MTBrooklynVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBrooklynVideoFilter.swift; sourceTree = "<group>"; };
+		52795DC82863B7A600F4FCB1 /* MTBrannanFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTBrannanFilter.swift; sourceTree = "<group>"; };
+		52795DC92863B7A600F4FCB1 /* MTSkylineVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSkylineVideoFilter.metal; sourceTree = "<group>"; };
+		52795DCA2863B7A600F4FCB1 /* MTCharmesVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTCharmesVideoFilter.metal; sourceTree = "<group>"; };
+		52795DCB2863B7A600F4FCB1 /* MTAdenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAdenFilter.swift; sourceTree = "<group>"; };
+		52795DCC2863B7A600F4FCB1 /* MTSierraFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSierraFilter.swift; sourceTree = "<group>"; };
+		52795DCD2863B7A600F4FCB1 /* IFShaderLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IFShaderLib.h; sourceTree = "<group>"; };
+		52795DCE2863B7A600F4FCB1 /* MTDogpatchVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTDogpatchVideoFilter.swift; sourceTree = "<group>"; };
+		52795DCF2863B7A600F4FCB1 /* MTHudsonFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHudsonFilter.swift; sourceTree = "<group>"; };
+		52795DD02863B7A600F4FCB1 /* MTLudwigFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLudwigFilter.swift; sourceTree = "<group>"; };
+		52795DD12863B7A600F4FCB1 /* MTAshbyVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAshbyVideoFilter.metal; sourceTree = "<group>"; };
+		52795DD22863B7A600F4FCB1 /* MTWillowFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTWillowFilter.swift; sourceTree = "<group>"; };
+		52795DD32863B7A600F4FCB1 /* MTKelvinFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTKelvinFilter.metal; sourceTree = "<group>"; };
+		52795DD42863B7A600F4FCB1 /* MTMoonVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTMoonVideoFilter.metal; sourceTree = "<group>"; };
+		52795DD52863B7A600F4FCB1 /* MTSlumberFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSlumberFilter.metal; sourceTree = "<group>"; };
+		52795DD62863B7A600F4FCB1 /* MTValenciaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTValenciaFilter.swift; sourceTree = "<group>"; };
+		52795DD72863B7A600F4FCB1 /* MT1977Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MT1977Filter.swift; sourceTree = "<group>"; };
+		52795DD82863B7A600F4FCB1 /* MTWaldenFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTWaldenFilter.metal; sourceTree = "<group>"; };
+		52795DD92863B7A600F4FCB1 /* MTNormalFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTNormalFilter.metal; sourceTree = "<group>"; };
+		52795DDA2863B7A600F4FCB1 /* MTXpro2Filter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTXpro2Filter.swift; sourceTree = "<group>"; };
+		52795DDB2863B7A600F4FCB1 /* MTRiseFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTRiseFilter.metal; sourceTree = "<group>"; };
+		52795DDC2863B7A600F4FCB1 /* MTNashvilleFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTNashvilleFilter.swift; sourceTree = "<group>"; };
+		52795DDD2863B7A600F4FCB1 /* MTHefeFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTHefeFilter.metal; sourceTree = "<group>"; };
+		52795DDE2863B7A600F4FCB1 /* MTLoFiFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLoFiFilter.metal; sourceTree = "<group>"; };
+		52795DDF2863B7A600F4FCB1 /* MTReyesFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTReyesFilter.metal; sourceTree = "<group>"; };
+		52795DE02863B7A600F4FCB1 /* MTMayfairFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTMayfairFilter.metal; sourceTree = "<group>"; };
+		52795DE12863B7A600F4FCB1 /* MTLarkFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLarkFilter.metal; sourceTree = "<group>"; };
+		52795DE22863B7A600F4FCB1 /* MTAmaroFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAmaroFilter.metal; sourceTree = "<group>"; };
+		52795DE32863B7A600F4FCB1 /* MTStinsonVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTStinsonVideoFilter.swift; sourceTree = "<group>"; };
+		52795DE42863B7A600F4FCB1 /* MTGinghamVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTGinghamVideoFilter.metal; sourceTree = "<group>"; };
+		52795DE52863B7A600F4FCB1 /* MTToasterFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTToasterFilter.swift; sourceTree = "<group>"; };
+		52795DE62863B7A600F4FCB1 /* MTPerpetuaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTPerpetuaFilter.metal; sourceTree = "<group>"; };
+		52795DE72863B7A600F4FCB1 /* MTVesperVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTVesperVideoFilter.swift; sourceTree = "<group>"; };
+		52795DE82863B7A600F4FCB1 /* MTClarendonVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTClarendonVideoFilter.swift; sourceTree = "<group>"; };
+		52795DE92863B7A600F4FCB1 /* MTJunoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTJunoFilter.swift; sourceTree = "<group>"; };
+		52795DEA2863B7A600F4FCB1 /* MTEarlybirdFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTEarlybirdFilter.metal; sourceTree = "<group>"; };
+		52795DEB2863B7A600F4FCB1 /* MTSutroFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSutroFilter.swift; sourceTree = "<group>"; };
+		52795DEC2863B7A600F4FCB1 /* MTHelenaVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHelenaVideoFilter.swift; sourceTree = "<group>"; };
+		52795DED2863B7A600F4FCB1 /* MTMavenVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTMavenVideoFilter.metal; sourceTree = "<group>"; };
+		52795DEE2863B7A600F4FCB1 /* MTGinzaVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTGinzaVideoFilter.swift; sourceTree = "<group>"; };
+		52795DEF2863B7A600F4FCB1 /* MTInkwellFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTInkwellFilter.metal; sourceTree = "<group>"; };
+		52795DF02863B7A600F4FCB1 /* MTCremaFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCremaFilter.swift; sourceTree = "<group>"; };
+		52795DF12863B7A600F4FCB1 /* MTLudwigFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTLudwigFilter.metal; sourceTree = "<group>"; };
+		52795DF22863B7A600F4FCB1 /* MTDogpatchVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTDogpatchVideoFilter.metal; sourceTree = "<group>"; };
+		52795DF32863B7A600F4FCB1 /* MTHudsonFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTHudsonFilter.metal; sourceTree = "<group>"; };
+		52795DF42863B7A600F4FCB1 /* MTBrannanFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTBrannanFilter.metal; sourceTree = "<group>"; };
+		52795DF52863B7A600F4FCB1 /* MTCharmesVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTCharmesVideoFilter.swift; sourceTree = "<group>"; };
+		52795DF62863B7A600F4FCB1 /* MTSkylineVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSkylineVideoFilter.swift; sourceTree = "<group>"; };
+		52795DF72863B7A600F4FCB1 /* MTAdenFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTAdenFilter.metal; sourceTree = "<group>"; };
+		52795DF82863B7A600F4FCB1 /* MTSierraFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTSierraFilter.metal; sourceTree = "<group>"; };
+		52795DF92863B7A600F4FCB1 /* MTBrooklynVideoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTBrooklynVideoFilter.metal; sourceTree = "<group>"; };
+		52795DFA2863B7A600F4FCB1 /* MT1977Filter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MT1977Filter.metal; sourceTree = "<group>"; };
+		52795DFB2863B7A600F4FCB1 /* MTSlumberFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTSlumberFilter.swift; sourceTree = "<group>"; };
+		52795DFC2863B7A600F4FCB1 /* MTValenciaFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTValenciaFilter.metal; sourceTree = "<group>"; };
+		52795DFD2863B7A600F4FCB1 /* MTAshbyVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTAshbyVideoFilter.swift; sourceTree = "<group>"; };
+		52795DFE2863B7A600F4FCB1 /* MTWillowFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTWillowFilter.metal; sourceTree = "<group>"; };
+		52795DFF2863B7A600F4FCB1 /* MTKelvinFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTKelvinFilter.swift; sourceTree = "<group>"; };
+		52795E002863B7A600F4FCB1 /* MTMoonVideoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMoonVideoFilter.swift; sourceTree = "<group>"; };
+		52795E012863B7A600F4FCB1 /* MTReyesFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTReyesFilter.swift; sourceTree = "<group>"; };
+		52795E022863B7A600F4FCB1 /* MTMayfairFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMayfairFilter.swift; sourceTree = "<group>"; };
+		52795E032863B7A600F4FCB1 /* MTHefeFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTHefeFilter.swift; sourceTree = "<group>"; };
+		52795E042863B7A600F4FCB1 /* MTLoFiFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTLoFiFilter.swift; sourceTree = "<group>"; };
+		52795E052863B7A600F4FCB1 /* MTNashvilleFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTNashvilleFilter.metal; sourceTree = "<group>"; };
+		52795E062863B7A600F4FCB1 /* MTWaldenFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTWaldenFilter.swift; sourceTree = "<group>"; };
+		52795E072863B7A600F4FCB1 /* MTNormalFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTNormalFilter.swift; sourceTree = "<group>"; };
+		52795E082863B7A600F4FCB1 /* MTXpro2Filter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = MTXpro2Filter.metal; sourceTree = "<group>"; };
+		52795E092863B7A600F4FCB1 /* MTRiseFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTRiseFilter.swift; sourceTree = "<group>"; };
 		66D16079E7077D8892F497ED /* Pods-EditerTasksAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EditerTasksAppTests.release.xcconfig"; path = "Target Support Files/Pods-EditerTasksAppTests/Pods-EditerTasksAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		797BF726B50A71B9B27D3957 /* Pods-EditerTasksAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EditerTasksAppTests.debug.xcconfig"; path = "Target Support Files/Pods-EditerTasksAppTests/Pods-EditerTasksAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D3DEA9CE4ED22B60B14C8A3 /* Pods_EditerTasksApp_EditerTasksAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EditerTasksApp_EditerTasksAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,9 +262,7 @@
 		F7C04301285C4E49008F940F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7C04304285C4E49008F940F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7C04306285C4E49008F940F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F7C0430B285C4E49008F940F /* EditerTasksAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditerTasksAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C0430F285C4E49008F940F /* EditerTasksAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditerTasksAppTests.swift; sourceTree = "<group>"; };
-		F7C04315285C4E49008F940F /* EditerTasksAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EditerTasksAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7C04319285C4E49008F940F /* EditerTasksAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditerTasksAppUITests.swift; sourceTree = "<group>"; };
 		F7C0431B285C4E49008F940F /* EditerTasksAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditerTasksAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,22 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F4FD813FFB9F464F8DFEE8A /* Pods_EditerTasksApp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7C04308285C4E49008F940F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C075D6203432533E419C0CF /* Pods_EditerTasksAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7C04312285C4E49008F940F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D831C3D2B1FE05E230A8BD8 /* Pods_EditerTasksApp_EditerTasksAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,9 +292,155 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		52795C4B286344CE00F4FCB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52795C4C286344CE00F4FCB1 /* FilterToolItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52795C4E286344F600F4FCB1 /* MTFilter */ = {
+			isa = PBXGroup;
+			children = (
+				52795C4F286344F600F4FCB1 /* MTFilterGroup.swift */,
+				52795C50286344F600F4FCB1 /* MTAntiLuxFilter.swift */,
+				52795C51286344F600F4FCB1 /* MTLocalLaplacianFilter.metal */,
+				52795C52286344F600F4FCB1 /* MTImageOverlayFilter.swift */,
+				52795C53286344F600F4FCB1 /* MTFilter.swift */,
+				52795C54286344F600F4FCB1 /* MTFilterManager.swift */,
+				52795C55286344F600F4FCB1 /* MTTintColor.swift */,
+				52795C56286344F600F4FCB1 /* MTLuxBlendFilter.swift */,
+				52795C57286344F600F4FCB1 /* MTBasicAdjustFilter.metal */,
+				52795C58286344F600F4FCB1 /* MTStarlightFilter.metal */,
+				52795C59286344F600F4FCB1 /* MTAntiLuxFilter.metal */,
+				52795C5A286344F600F4FCB1 /* MTImageOverlayFilter.metal */,
+				52795C5B286344F600F4FCB1 /* MTLocalLaplacianFilter.swift */,
+				52795C5C286344F600F4FCB1 /* MTStarlightFilter.swift */,
+				52795C5D286344F600F4FCB1 /* MTLuxBlendFilter.metal */,
+				52795C5E286344F700F4FCB1 /* MTBasicAdjustFilter.swift */,
+			);
+			path = MTFilter;
+			sourceTree = "<group>";
+		};
+		52795C6F2863450300F4FCB1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52795C702863450300F4FCB1 /* UIView+SafeArea.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52795C742863474300F4FCB1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52795C752863474300F4FCB1 /* HorizontalSliderView.swift */,
+				52795C762863474300F4FCB1 /* AlbumPhotoCell.swift */,
+				52795C772863474300F4FCB1 /* MTGridView.swift */,
+				52795C782863474300F4FCB1 /* FilterTintColorPicker.swift */,
+				52795C792863474300F4FCB1 /* MTScrollView.swift */,
+				52795C7A2863474300F4FCB1 /* FilterPickerCell.swift */,
+				52795C7B2863474300F4FCB1 /* FilterControlView.swift */,
+				52795C7C2863474300F4FCB1 /* FilterTintColorControl.swift */,
+				52795C7D2863474300F4FCB1 /* ToolPickerCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52795DB62863B7A600F4FCB1 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				52795DB72863B7A600F4FCB1 /* MTInkwellFilter.swift */,
+				52795DB82863B7A600F4FCB1 /* MTCremaFilter.metal */,
+				52795DB92863B7A600F4FCB1 /* MTJunoFilter.metal */,
+				52795DBA2863B7A600F4FCB1 /* MTEarlybirdFilter.swift */,
+				52795DBB2863B7A600F4FCB1 /* MTSutroFilter.metal */,
+				52795DBC2863B7A600F4FCB1 /* MTHelenaVideoFilter.metal */,
+				52795DBD2863B7A600F4FCB1 /* MTMavenVideoFilter.swift */,
+				52795DBE2863B7A600F4FCB1 /* MTGinzaVideoFilter.metal */,
+				52795DBF2863B7A600F4FCB1 /* MTClarendonVideoFilter.metal */,
+				52795DC02863B7A600F4FCB1 /* MTLarkFilter.swift */,
+				52795DC12863B7A600F4FCB1 /* MTAmaroFilter.swift */,
+				52795DC22863B7A600F4FCB1 /* MTStinsonVideoFilter.metal */,
+				52795DC32863B7A600F4FCB1 /* MTGinghamVideoFilter.swift */,
+				52795DC42863B7A600F4FCB1 /* MTToasterFilter.metal */,
+				52795DC52863B7A600F4FCB1 /* MTPerpetuaFilter.swift */,
+				52795DC62863B7A600F4FCB1 /* MTVesperVideoFilter.metal */,
+				52795DC72863B7A600F4FCB1 /* MTBrooklynVideoFilter.swift */,
+				52795DC82863B7A600F4FCB1 /* MTBrannanFilter.swift */,
+				52795DC92863B7A600F4FCB1 /* MTSkylineVideoFilter.metal */,
+				52795DCA2863B7A600F4FCB1 /* MTCharmesVideoFilter.metal */,
+				52795DCB2863B7A600F4FCB1 /* MTAdenFilter.swift */,
+				52795DCC2863B7A600F4FCB1 /* MTSierraFilter.swift */,
+				52795DCD2863B7A600F4FCB1 /* IFShaderLib.h */,
+				52795DCE2863B7A600F4FCB1 /* MTDogpatchVideoFilter.swift */,
+				52795DCF2863B7A600F4FCB1 /* MTHudsonFilter.swift */,
+				52795DD02863B7A600F4FCB1 /* MTLudwigFilter.swift */,
+				52795DD12863B7A600F4FCB1 /* MTAshbyVideoFilter.metal */,
+				52795DD22863B7A600F4FCB1 /* MTWillowFilter.swift */,
+				52795DD32863B7A600F4FCB1 /* MTKelvinFilter.metal */,
+				52795DD42863B7A600F4FCB1 /* MTMoonVideoFilter.metal */,
+				52795DD52863B7A600F4FCB1 /* MTSlumberFilter.metal */,
+				52795DD62863B7A600F4FCB1 /* MTValenciaFilter.swift */,
+				52795DD72863B7A600F4FCB1 /* MT1977Filter.swift */,
+				52795DD82863B7A600F4FCB1 /* MTWaldenFilter.metal */,
+				52795DD92863B7A600F4FCB1 /* MTNormalFilter.metal */,
+				52795DDA2863B7A600F4FCB1 /* MTXpro2Filter.swift */,
+				52795DDB2863B7A600F4FCB1 /* MTRiseFilter.metal */,
+				52795DDC2863B7A600F4FCB1 /* MTNashvilleFilter.swift */,
+				52795DDD2863B7A600F4FCB1 /* MTHefeFilter.metal */,
+				52795DDE2863B7A600F4FCB1 /* MTLoFiFilter.metal */,
+				52795DDF2863B7A600F4FCB1 /* MTReyesFilter.metal */,
+				52795DE02863B7A600F4FCB1 /* MTMayfairFilter.metal */,
+				52795DE12863B7A600F4FCB1 /* MTLarkFilter.metal */,
+				52795DE22863B7A600F4FCB1 /* MTAmaroFilter.metal */,
+				52795DE32863B7A600F4FCB1 /* MTStinsonVideoFilter.swift */,
+				52795DE42863B7A600F4FCB1 /* MTGinghamVideoFilter.metal */,
+				52795DE52863B7A600F4FCB1 /* MTToasterFilter.swift */,
+				52795DE62863B7A600F4FCB1 /* MTPerpetuaFilter.metal */,
+				52795DE72863B7A600F4FCB1 /* MTVesperVideoFilter.swift */,
+				52795DE82863B7A600F4FCB1 /* MTClarendonVideoFilter.swift */,
+				52795DE92863B7A600F4FCB1 /* MTJunoFilter.swift */,
+				52795DEA2863B7A600F4FCB1 /* MTEarlybirdFilter.metal */,
+				52795DEB2863B7A600F4FCB1 /* MTSutroFilter.swift */,
+				52795DEC2863B7A600F4FCB1 /* MTHelenaVideoFilter.swift */,
+				52795DED2863B7A600F4FCB1 /* MTMavenVideoFilter.metal */,
+				52795DEE2863B7A600F4FCB1 /* MTGinzaVideoFilter.swift */,
+				52795DEF2863B7A600F4FCB1 /* MTInkwellFilter.metal */,
+				52795DF02863B7A600F4FCB1 /* MTCremaFilter.swift */,
+				52795DF12863B7A600F4FCB1 /* MTLudwigFilter.metal */,
+				52795DF22863B7A600F4FCB1 /* MTDogpatchVideoFilter.metal */,
+				52795DF32863B7A600F4FCB1 /* MTHudsonFilter.metal */,
+				52795DF42863B7A600F4FCB1 /* MTBrannanFilter.metal */,
+				52795DF52863B7A600F4FCB1 /* MTCharmesVideoFilter.swift */,
+				52795DF62863B7A600F4FCB1 /* MTSkylineVideoFilter.swift */,
+				52795DF72863B7A600F4FCB1 /* MTAdenFilter.metal */,
+				52795DF82863B7A600F4FCB1 /* MTSierraFilter.metal */,
+				52795DF92863B7A600F4FCB1 /* MTBrooklynVideoFilter.metal */,
+				52795DFA2863B7A600F4FCB1 /* MT1977Filter.metal */,
+				52795DFB2863B7A600F4FCB1 /* MTSlumberFilter.swift */,
+				52795DFC2863B7A600F4FCB1 /* MTValenciaFilter.metal */,
+				52795DFD2863B7A600F4FCB1 /* MTAshbyVideoFilter.swift */,
+				52795DFE2863B7A600F4FCB1 /* MTWillowFilter.metal */,
+				52795DFF2863B7A600F4FCB1 /* MTKelvinFilter.swift */,
+				52795E002863B7A600F4FCB1 /* MTMoonVideoFilter.swift */,
+				52795E012863B7A600F4FCB1 /* MTReyesFilter.swift */,
+				52795E022863B7A600F4FCB1 /* MTMayfairFilter.swift */,
+				52795E032863B7A600F4FCB1 /* MTHefeFilter.swift */,
+				52795E042863B7A600F4FCB1 /* MTLoFiFilter.swift */,
+				52795E052863B7A600F4FCB1 /* MTNashvilleFilter.metal */,
+				52795E062863B7A600F4FCB1 /* MTWaldenFilter.swift */,
+				52795E072863B7A600F4FCB1 /* MTNormalFilter.swift */,
+				52795E082863B7A600F4FCB1 /* MTXpro2Filter.metal */,
+				52795E092863B7A600F4FCB1 /* MTRiseFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		C3BA7D2262A9EE47000CCC20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				52795C8728635B2D00F4FCB1 /* MetalPetal.framework */,
 				51CDC1D0DF3F616970D64103 /* Pods_EditerTasksApp.framework */,
 				7D3DEA9CE4ED22B60B14C8A3 /* Pods_EditerTasksApp_EditerTasksAppUITests.framework */,
 				107565F7B3A98C8AD0BA5C7A /* Pods_EditerTasksAppTests.framework */,
@@ -132,8 +464,6 @@
 			isa = PBXGroup;
 			children = (
 				F7C042F5285C4E47008F940F /* EditerTasksApp.app */,
-				F7C0430B285C4E49008F940F /* EditerTasksAppTests.xctest */,
-				F7C04315285C4E49008F940F /* EditerTasksAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,10 +471,18 @@
 		F7C042F7285C4E47008F940F /* EditerTasksApp */ = {
 			isa = PBXGroup;
 			children = (
+				52795C742863474300F4FCB1 /* Views */,
+				52795DB62863B7A600F4FCB1 /* Filters */,
+				52795C4E286344F600F4FCB1 /* MTFilter */,
+				52795C6F2863450300F4FCB1 /* Extensions */,
+				52795C4B286344CE00F4FCB1 /* Models */,
+				52795C4328633EE200F4FCB1 /* ImagePickerManager.swift */,
 				F7C042F8285C4E47008F940F /* AppDelegate.swift */,
 				F7C042FA285C4E47008F940F /* SceneDelegate.swift */,
 				F7C042FC285C4E47008F940F /* ViewController.swift */,
+				52795C47286341D300F4FCB1 /* EditPhotoViewController.swift */,
 				F7C042FE285C4E47008F940F /* Main.storyboard */,
+				52795C72286345FD00F4FCB1 /* FilterAssets.bundle */,
 				F7C04301285C4E49008F940F /* Assets.xcassets */,
 				F7C04303285C4E49008F940F /* LaunchScreen.storyboard */,
 				F7C04306285C4E49008F940F /* Info.plist */,
@@ -192,45 +530,6 @@
 			productReference = F7C042F5285C4E47008F940F /* EditerTasksApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F7C0430A285C4E49008F940F /* EditerTasksAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7C04322285C4E49008F940F /* Build configuration list for PBXNativeTarget "EditerTasksAppTests" */;
-			buildPhases = (
-				0BB7B11A00BA15317F514D46 /* [CP] Check Pods Manifest.lock */,
-				F7C04307285C4E49008F940F /* Sources */,
-				F7C04308285C4E49008F940F /* Frameworks */,
-				F7C04309285C4E49008F940F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7C0430D285C4E49008F940F /* PBXTargetDependency */,
-			);
-			name = EditerTasksAppTests;
-			productName = EditerTasksAppTests;
-			productReference = F7C0430B285C4E49008F940F /* EditerTasksAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F7C04314285C4E49008F940F /* EditerTasksAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F7C04325285C4E49008F940F /* Build configuration list for PBXNativeTarget "EditerTasksAppUITests" */;
-			buildPhases = (
-				6BDB5D6D57EF8F2F4C02EB7C /* [CP] Check Pods Manifest.lock */,
-				F7C04311285C4E49008F940F /* Sources */,
-				F7C04312285C4E49008F940F /* Frameworks */,
-				F7C04313285C4E49008F940F /* Resources */,
-				0A4F969A9DC74945A4BD2663 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F7C04317285C4E49008F940F /* PBXTargetDependency */,
-			);
-			name = EditerTasksAppUITests;
-			productName = EditerTasksAppUITests;
-			productReference = F7C04315285C4E49008F940F /* EditerTasksAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -243,14 +542,6 @@
 				TargetAttributes = {
 					F7C042F4285C4E47008F940F = {
 						CreatedOnToolsVersion = 13.2.1;
-					};
-					F7C0430A285C4E49008F940F = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = F7C042F4285C4E47008F940F;
-					};
-					F7C04314285C4E49008F940F = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = F7C042F4285C4E47008F940F;
 					};
 				};
 			};
@@ -268,8 +559,6 @@
 			projectRoot = "";
 			targets = (
 				F7C042F4285C4E47008F940F /* EditerTasksApp */,
-				F7C0430A285C4E49008F940F /* EditerTasksAppTests */,
-				F7C04314285C4E49008F940F /* EditerTasksAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,65 +572,13 @@
 				45A203922861AD42001DAB82 /* GoogleService-Info.plist in Resources */,
 				F7C04302285C4E49008F940F /* Assets.xcassets in Resources */,
 				F7C04300285C4E47008F940F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7C04309285C4E49008F940F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7C04313285C4E49008F940F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				52795C73286345FD00F4FCB1 /* FilterAssets.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A4F969A9DC74945A4BD2663 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EditerTasksApp-EditerTasksAppUITests/Pods-EditerTasksApp-EditerTasksAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-EditerTasksApp-EditerTasksAppUITests/Pods-EditerTasksApp-EditerTasksAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EditerTasksApp-EditerTasksAppUITests/Pods-EditerTasksApp-EditerTasksAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0BB7B11A00BA15317F514D46 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EditerTasksAppTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		400953689EC7F2021EEDCD0F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,28 +594,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EditerTasksApp/Pods-EditerTasksApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6BDB5D6D57EF8F2F4C02EB7C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-EditerTasksApp-EditerTasksAppUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B1BD677D1849CA5D5C70236B /* [CP] Check Pods Manifest.lock */ = {
@@ -410,43 +625,124 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52795E202863B7A600F4FCB1 /* MTDogpatchVideoFilter.swift in Sources */,
+				52795C7F2863474300F4FCB1 /* AlbumPhotoCell.swift in Sources */,
+				52795E3D2863B7A700F4FCB1 /* MTSutroFilter.swift in Sources */,
+				52795E1C2863B7A600F4FCB1 /* MTSkylineVideoFilter.metal in Sources */,
+				52795C802863474300F4FCB1 /* MTGridView.swift in Sources */,
+				52795E572863B7A700F4FCB1 /* MTNashvilleFilter.metal in Sources */,
 				F7C042FD285C4E47008F940F /* ViewController.swift in Sources */,
+				52795E1E2863B7A600F4FCB1 /* MTAdenFilter.swift in Sources */,
+				52795E1D2863B7A600F4FCB1 /* MTCharmesVideoFilter.metal in Sources */,
+				52795E392863B7A700F4FCB1 /* MTVesperVideoFilter.swift in Sources */,
+				52795C69286344F700F4FCB1 /* MTAntiLuxFilter.metal in Sources */,
+				52795E422863B7A700F4FCB1 /* MTCremaFilter.swift in Sources */,
+				52795C68286344F700F4FCB1 /* MTStarlightFilter.metal in Sources */,
+				52795E0F2863B7A600F4FCB1 /* MTHelenaVideoFilter.metal in Sources */,
+				52795C61286344F700F4FCB1 /* MTLocalLaplacianFilter.metal in Sources */,
+				52795C48286341D300F4FCB1 /* EditPhotoViewController.swift in Sources */,
+				52795E292863B7A700F4FCB1 /* MT1977Filter.swift in Sources */,
+				52795C7E2863474300F4FCB1 /* HorizontalSliderView.swift in Sources */,
+				52795E2F2863B7A700F4FCB1 /* MTHefeFilter.metal in Sources */,
+				52795E4A2863B7A700F4FCB1 /* MTSierraFilter.metal in Sources */,
+				52795E532863B7A700F4FCB1 /* MTReyesFilter.swift in Sources */,
+				52795E492863B7A700F4FCB1 /* MTAdenFilter.metal in Sources */,
+				52795E4B2863B7A700F4FCB1 /* MTBrooklynVideoFilter.metal in Sources */,
+				52795E1B2863B7A600F4FCB1 /* MTBrannanFilter.swift in Sources */,
+				52795C5F286344F700F4FCB1 /* MTFilterGroup.swift in Sources */,
+				52795E512863B7A700F4FCB1 /* MTKelvinFilter.swift in Sources */,
+				52795C4D286344CF00F4FCB1 /* FilterToolItem.swift in Sources */,
+				52795E542863B7A700F4FCB1 /* MTMayfairFilter.swift in Sources */,
+				52795E0E2863B7A600F4FCB1 /* MTSutroFilter.metal in Sources */,
+				52795E402863B7A700F4FCB1 /* MTGinzaVideoFilter.swift in Sources */,
+				52795E522863B7A700F4FCB1 /* MTMoonVideoFilter.swift in Sources */,
+				52795C65286344F700F4FCB1 /* MTTintColor.swift in Sources */,
+				52795E142863B7A600F4FCB1 /* MTAmaroFilter.swift in Sources */,
+				52795E5A2863B7A700F4FCB1 /* MTXpro2Filter.metal in Sources */,
+				52795E0D2863B7A600F4FCB1 /* MTEarlybirdFilter.swift in Sources */,
+				52795E442863B7A700F4FCB1 /* MTDogpatchVideoFilter.metal in Sources */,
+				52795E152863B7A600F4FCB1 /* MTStinsonVideoFilter.metal in Sources */,
+				52795C862863474300F4FCB1 /* ToolPickerCell.swift in Sources */,
+				52795E452863B7A700F4FCB1 /* MTHudsonFilter.metal in Sources */,
+				52795C63286344F700F4FCB1 /* MTFilter.swift in Sources */,
+				52795C64286344F700F4FCB1 /* MTFilterManager.swift in Sources */,
+				52795C6D286344F700F4FCB1 /* MTLuxBlendFilter.metal in Sources */,
+				52795C66286344F700F4FCB1 /* MTLuxBlendFilter.swift in Sources */,
+				52795E1A2863B7A600F4FCB1 /* MTBrooklynVideoFilter.swift in Sources */,
+				52795E272863B7A700F4FCB1 /* MTSlumberFilter.metal in Sources */,
+				52795E5B2863B7A700F4FCB1 /* MTRiseFilter.swift in Sources */,
+				52795E2A2863B7A700F4FCB1 /* MTWaldenFilter.metal in Sources */,
+				52795E4F2863B7A700F4FCB1 /* MTAshbyVideoFilter.swift in Sources */,
+				52795E182863B7A600F4FCB1 /* MTPerpetuaFilter.swift in Sources */,
+				52795E592863B7A700F4FCB1 /* MTNormalFilter.swift in Sources */,
+				52795C832863474300F4FCB1 /* FilterPickerCell.swift in Sources */,
+				52795E382863B7A700F4FCB1 /* MTPerpetuaFilter.metal in Sources */,
+				52795E0B2863B7A600F4FCB1 /* MTCremaFilter.metal in Sources */,
+				52795E0C2863B7A600F4FCB1 /* MTJunoFilter.metal in Sources */,
+				52795E4E2863B7A700F4FCB1 /* MTValenciaFilter.metal in Sources */,
+				52795C6E286344F700F4FCB1 /* MTBasicAdjustFilter.swift in Sources */,
+				52795E482863B7A700F4FCB1 /* MTSkylineVideoFilter.swift in Sources */,
+				52795E122863B7A600F4FCB1 /* MTClarendonVideoFilter.metal in Sources */,
+				52795E362863B7A700F4FCB1 /* MTGinghamVideoFilter.metal in Sources */,
+				52795E162863B7A600F4FCB1 /* MTGinghamVideoFilter.swift in Sources */,
+				52795E412863B7A700F4FCB1 /* MTInkwellFilter.metal in Sources */,
+				52795E3C2863B7A700F4FCB1 /* MTEarlybirdFilter.metal in Sources */,
+				52795E4C2863B7A700F4FCB1 /* MT1977Filter.metal in Sources */,
+				52795E432863B7A700F4FCB1 /* MTLudwigFilter.metal in Sources */,
+				52795C822863474300F4FCB1 /* MTScrollView.swift in Sources */,
+				52795E302863B7A700F4FCB1 /* MTLoFiFilter.metal in Sources */,
+				52795E372863B7A700F4FCB1 /* MTToasterFilter.swift in Sources */,
+				52795C6C286344F700F4FCB1 /* MTStarlightFilter.swift in Sources */,
+				52795E552863B7A700F4FCB1 /* MTHefeFilter.swift in Sources */,
+				52795C67286344F700F4FCB1 /* MTBasicAdjustFilter.metal in Sources */,
+				52795C60286344F700F4FCB1 /* MTAntiLuxFilter.swift in Sources */,
+				52795E312863B7A700F4FCB1 /* MTReyesFilter.metal in Sources */,
+				52795E242863B7A700F4FCB1 /* MTWillowFilter.swift in Sources */,
+				52795C712863450300F4FCB1 /* UIView+SafeArea.swift in Sources */,
+				52795E2B2863B7A700F4FCB1 /* MTNormalFilter.metal in Sources */,
+				52795E462863B7A700F4FCB1 /* MTBrannanFilter.metal in Sources */,
+				52795C842863474300F4FCB1 /* FilterControlView.swift in Sources */,
+				52795E3E2863B7A700F4FCB1 /* MTHelenaVideoFilter.swift in Sources */,
+				52795E472863B7A700F4FCB1 /* MTCharmesVideoFilter.swift in Sources */,
+				52795E132863B7A600F4FCB1 /* MTLarkFilter.swift in Sources */,
+				52795E4D2863B7A700F4FCB1 /* MTSlumberFilter.swift in Sources */,
+				52795C812863474300F4FCB1 /* FilterTintColorPicker.swift in Sources */,
+				52795E282863B7A700F4FCB1 /* MTValenciaFilter.swift in Sources */,
+				52795E502863B7A700F4FCB1 /* MTWillowFilter.metal in Sources */,
+				52795C6B286344F700F4FCB1 /* MTLocalLaplacianFilter.swift in Sources */,
+				52795E2D2863B7A700F4FCB1 /* MTRiseFilter.metal in Sources */,
+				52795E262863B7A700F4FCB1 /* MTMoonVideoFilter.metal in Sources */,
+				52795E3B2863B7A700F4FCB1 /* MTJunoFilter.swift in Sources */,
+				52795E102863B7A600F4FCB1 /* MTMavenVideoFilter.swift in Sources */,
+				52795E342863B7A700F4FCB1 /* MTAmaroFilter.metal in Sources */,
+				52795E2E2863B7A700F4FCB1 /* MTNashvilleFilter.swift in Sources */,
+				52795E252863B7A700F4FCB1 /* MTKelvinFilter.metal in Sources */,
+				52795E562863B7A700F4FCB1 /* MTLoFiFilter.swift in Sources */,
+				52795E172863B7A600F4FCB1 /* MTToasterFilter.metal in Sources */,
+				52795E112863B7A600F4FCB1 /* MTGinzaVideoFilter.metal in Sources */,
+				52795E3F2863B7A700F4FCB1 /* MTMavenVideoFilter.metal in Sources */,
+				52795C6A286344F700F4FCB1 /* MTImageOverlayFilter.metal in Sources */,
+				52795E352863B7A700F4FCB1 /* MTStinsonVideoFilter.swift in Sources */,
+				52795E212863B7A700F4FCB1 /* MTHudsonFilter.swift in Sources */,
 				F7C042F9285C4E47008F940F /* AppDelegate.swift in Sources */,
+				52795E2C2863B7A700F4FCB1 /* MTXpro2Filter.swift in Sources */,
 				F7C042FB285C4E47008F940F /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7C04307285C4E49008F940F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7C04310285C4E49008F940F /* EditerTasksAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F7C04311285C4E49008F940F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F7C0431C285C4E49008F940F /* EditerTasksAppUITestsLaunchTests.swift in Sources */,
-				F7C0431A285C4E49008F940F /* EditerTasksAppUITests.swift in Sources */,
+				52795E1F2863B7A600F4FCB1 /* MTSierraFilter.swift in Sources */,
+				52795E0A2863B7A600F4FCB1 /* MTInkwellFilter.swift in Sources */,
+				52795E332863B7A700F4FCB1 /* MTLarkFilter.metal in Sources */,
+				52795C852863474300F4FCB1 /* FilterTintColorControl.swift in Sources */,
+				52795E3A2863B7A700F4FCB1 /* MTClarendonVideoFilter.swift in Sources */,
+				52795E192863B7A600F4FCB1 /* MTVesperVideoFilter.metal in Sources */,
+				52795E222863B7A700F4FCB1 /* MTLudwigFilter.swift in Sources */,
+				52795C4428633EE200F4FCB1 /* ImagePickerManager.swift in Sources */,
+				52795E232863B7A700F4FCB1 /* MTAshbyVideoFilter.metal in Sources */,
+				52795C62286344F700F4FCB1 /* MTImageOverlayFilter.swift in Sources */,
+				52795E582863B7A700F4FCB1 /* MTWaldenFilter.swift in Sources */,
+				52795E322863B7A700F4FCB1 /* MTMayfairFilter.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F7C0430D285C4E49008F940F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7C042F4285C4E47008F940F /* EditerTasksApp */;
-			targetProxy = F7C0430C285C4E49008F940F /* PBXContainerItemProxy */;
-		};
-		F7C04317285C4E49008F940F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F7C042F4285C4E47008F940F /* EditerTasksApp */;
-			targetProxy = F7C04316285C4E49008F940F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F7C042FE285C4E47008F940F /* Main.storyboard */ = {
@@ -519,7 +815,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -574,7 +870,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -595,6 +891,37 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KG7T95777W;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuthInterop/FirebaseAuthInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreExtension/FirebaseCoreExtension.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseDatabase/FirebaseDatabase.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorageInternal/FirebaseStorageInternal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport/GoogleDataTransport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PryntTrimmerView/PryntTrimmerView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SteviaLayout/Stevia.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YPImagePicker/YPImagePicker.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/iOSPhotoEditor/iOSPhotoEditor.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+				);
 				INFOPLIST_FILE = EditerTasksApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "EditerTasksApp ";
 				INFOPLIST_KEY_NSCameraUsageDescription = "App wants to access your camera to capture your photo and edit.";
@@ -606,17 +933,20 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTL_HEADER_SEARCH_PATHS = "${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers";
 				PRODUCT_BUNDLE_IDENTIFIER = com.editer.tasksApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "MobileApp Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -631,6 +961,37 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KG7T95777W;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAppCheckInterop/FirebaseAppCheckInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuth/FirebaseAuth.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseAuthInterop/FirebaseAuthInterop.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCore/FirebaseCore.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreExtension/FirebaseCoreExtension.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseCoreInternal/FirebaseCoreInternal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseDatabase/FirebaseDatabase.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseInstallations/FirebaseInstallations.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorage/FirebaseStorage.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseStorageInternal/FirebaseStorageInternal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleDataTransport/GoogleDataTransport.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/GoogleUtilities/GoogleUtilities.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MBProgressHUD/MBProgressHUD.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PromisesObjC/FBLPromises.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/PryntTrimmerView/PryntTrimmerView.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SteviaLayout/Stevia.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YPImagePicker/YPImagePicker.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/iOSPhotoEditor/iOSPhotoEditor.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/leveldb-library/leveldb.framework/Headers\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/nanopb/nanopb.framework/Headers\"",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"$(inherited)",
+					"${PODS_ROOT}/Firebase/CoreOnly/Sources",
+				);
 				INFOPLIST_FILE = EditerTasksApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "EditerTasksApp ";
 				INFOPLIST_KEY_NSCameraUsageDescription = "App wants to access your camera to capture your photo and edit.";
@@ -642,93 +1003,20 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MTL_HEADER_SEARCH_PATHS = "${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers";
 				PRODUCT_BUNDLE_IDENTIFIER = com.editer.tasksApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "MobileApp Development";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		F7C04323285C4E49008F940F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 797BF726B50A71B9B27D3957 /* Pods-EditerTasksAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.askaribank.EditerTasksAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EditerTasksApp.app/EditerTasksApp";
-			};
-			name = Debug;
-		};
-		F7C04324285C4E49008F940F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66D16079E7077D8892F497ED /* Pods-EditerTasksAppTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.askaribank.EditerTasksAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EditerTasksApp.app/EditerTasksApp";
-			};
-			name = Release;
-		};
-		F7C04326285C4E49008F940F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 194F51D2DCC000345431C992 /* Pods-EditerTasksApp-EditerTasksAppUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.askaribank.EditerTasksAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EditerTasksApp;
-			};
-			name = Debug;
-		};
-		F7C04327285C4E49008F940F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE78E33F9661099CC09AC1FF /* Pods-EditerTasksApp-EditerTasksAppUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.askaribank.EditerTasksAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = EditerTasksApp;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};
@@ -749,24 +1037,6 @@
 			buildConfigurations = (
 				F7C04320285C4E49008F940F /* Debug */,
 				F7C04321285C4E49008F940F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7C04322285C4E49008F940F /* Build configuration list for PBXNativeTarget "EditerTasksAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7C04323285C4E49008F940F /* Debug */,
-				F7C04324285C4E49008F940F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F7C04325285C4E49008F940F /* Build configuration list for PBXNativeTarget "EditerTasksAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F7C04326285C4E49008F940F /* Debug */,
-				F7C04327285C4E49008F940F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

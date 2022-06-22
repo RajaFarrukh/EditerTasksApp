@@ -11,18 +11,11 @@ target 'EditerTasksApp' do
   pod 'IQKeyboardManagerSwift'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+  #pod 'Firebase/Firestore'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'MBProgressHUD', '~> 1.2.0'
-
-  target 'EditerTasksAppTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'EditerTasksAppUITests' do
-    # Pods for testing
-  end
+  pod 'MetalPetal'
+ 
 
 end
