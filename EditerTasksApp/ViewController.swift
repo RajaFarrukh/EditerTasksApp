@@ -17,6 +17,7 @@ import AVFoundation
 import Photos
 import Metal
 import MetalKit
+import PixelSDK
 
 class ViewController: UIViewController {
     
@@ -135,22 +136,38 @@ class ViewController: UIViewController {
      Description: IBAction for record video button
      */
     @IBAction func onBtnRecordVideo(_ sender:AnyObject) {
-        // Here we configure the picker to only show videos, no photos.
-        var config = YPImagePickerConfiguration()
-        config.screens = [.library, .video]
-        config.library.mediaType = .video
         
-        let picker = YPImagePicker(configuration: config)
-        picker.didFinishPicking { [unowned picker] items, _ in
-            if let video = items.singleVideo {
-                //                print(video.fromCamera)
-                //                print(video.thumbnail)
-                //                print(video.url)
-                self.uploadVideoToFirebase(localUrl: video.url)
-            }
-            picker.dismiss(animated: true, completion: nil)
-        }
-        present(picker, animated: true, completion: nil)
+        // Show only the library and video camera modes in the tab bar
+        let container = ContainerController(modes: [.library, .video])
+        container.editControllerDelegate = self
+
+        // Include only videos from the users photo library
+        container.libraryController.fetchPredicate = NSPredicate(format: "mediaType == %d", PHAssetMediaType.video.rawValue)
+        // Include only videos from the users drafts
+        container.libraryController.draftMediaTypes = [.video]
+
+        let nav = UINavigationController(rootViewController: container)
+        nav.modalPresentationStyle = .fullScreen
+
+        self.present(nav, animated: true, completion: nil)
+        
+        // Here we configure the picker to only show videos, no photos.
+//        var config = YPImagePickerConfiguration()
+//        config.screens = [.library, .video]
+//        config.library.mediaType = .video
+//
+//        let picker = YPImagePicker(configuration: config)
+//        picker.didFinishPicking { [unowned picker] items, _ in
+//            if let video = items.singleVideo {
+//                //                print(video.fromCamera)
+//                //                print(video.thumbnail)
+//                //                print(video.url)
+//               // self.uploadVideoToFirebase(localUrl: video.url)
+//
+//            }
+//            picker.dismiss(animated: true, completion: nil)
+//        }
+//        present(picker, animated: true, completion: nil)
     }
     
     
@@ -185,3 +202,11 @@ class ImageSaver: NSObject {
     }
 }
 
+extension ViewController: EditControllerDelegate {
+
+    func editController(_ editController: EditController, didFinishEditing session: Session) {
+        let controller = UIViewController()
+
+        editController.navigationController?.pushViewController(controller, animated: true)
+    }
+}

@@ -15,7 +15,7 @@ target 'EditerTasksApp' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'MBProgressHUD', '~> 1.2.0'
-  pod 'MetalPetal'
- 
+  pod 'MetalPetal', '~> 1.10.6'
+  pod 'PixelSDK'
 
 end
