@@ -82,6 +82,22 @@ class ViewController: UIViewController {
         }
     }
     
+    func saveVideoToDevice(localUrl:URL) {
+        PHPhotoLibrary.shared().performChanges({
+            PHAssetChangeRequest.creationRequestForAssetFromVideo(atFileURL: localUrl)
+        }) { saved, error in
+            if saved {
+                print("Your video was successfully saved")
+//                let alertController = UIAlertController(title: "Your video was successfully saved", message: nil, preferredStyle: .alert)
+//                let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+//                alertController.addAction(defaultAction)
+//                self.present(alertController, animated: true, completion: nil)
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+    }
+    
     /*
      Method: uploadTOFireBaseVideo
      Description: Method to upload TO Fire Base Video
@@ -235,8 +251,10 @@ extension ViewController: EditControllerDelegate {
                 }
                 self.videoURl = video.exportedVideoURL
                 print("Finished video export at URL: \(video.exportedVideoURL)")
+                
                 editController.dismiss(animated: true) {
                     if let url = self.videoURl {
+                        self.saveVideoToDevice(localUrl: url)
                         self.uploadVideoToFirebase(localUrl: url)
                     }
                 }
