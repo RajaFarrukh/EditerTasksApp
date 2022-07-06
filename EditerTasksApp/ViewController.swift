@@ -23,13 +23,17 @@ class ViewController: UIViewController {
     
     var ypImagePickerReturendImage:UIImage? = nil
     var imageFianle:UIImage? = nil
-    
+    var videoURl:URL? = nil
+    var isVideoEdttingDone:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     
     // MARK: - Other Methods
     
@@ -86,26 +90,36 @@ class ViewController: UIViewController {
     func uploadTOFireBaseVideo(url: URL,
                                success : @escaping (String) -> Void,
                                failure : @escaping (Error) -> Void) {
-        
-        let name = "\(Int(Date().timeIntervalSince1970)).mov"
-        let path = NSTemporaryDirectory() + name
+        DispatchQueue.main.async {
+            MBProgressHUD.showAdded(to: self.view, animated: true)
+        }
+        let name = "\(Int(Date().timeIntervalSince1970)).mp4"
+        //        let path = NSTemporaryDirectory() + name
         let data = NSData(contentsOf: url)
         
-        MBProgressHUD.showAdded(to: self.view, animated: true)
         let storageRef = Storage.storage().reference().child("Videos").child(name)
         if let uploadData = data as Data? {
             let metaData = StorageMetadata()
-            metaData.contentType = "video/mov"
+            metaData.contentType = "video/mp4"
             storageRef.putData(uploadData, metadata: metaData
                                , completion: { (metadata, error) in
-                MBProgressHUD.hide(for: self.view, animated: true)
+                DispatchQueue.main.async {
+                    MBProgressHUD.hide(for: self.view, animated: true)
+                }
                 if let error = error {
                     failure(error)
                 }else{
                     // let strPic:String = (metadata?.downloadURL()?.absoluteString)!
+                    DispatchQueue.main.async {
+                        MBProgressHUD.hide(for: self.view, animated: true)
+                    }
                     success("Upload Done")
                 }
             })
+        } else {
+            DispatchQueue.main.async {
+                MBProgressHUD.hide(for: self.view, animated: true)
+            }
         }
     }
     
@@ -140,34 +154,34 @@ class ViewController: UIViewController {
         // Show only the library and video camera modes in the tab bar
         let container = ContainerController(modes: [.library, .video])
         container.editControllerDelegate = self
-
+        
         // Include only videos from the users photo library
         container.libraryController.fetchPredicate = NSPredicate(format: "mediaType == %d", PHAssetMediaType.video.rawValue)
         // Include only videos from the users drafts
         container.libraryController.draftMediaTypes = [.video]
-
+        
         let nav = UINavigationController(rootViewController: container)
         nav.modalPresentationStyle = .fullScreen
-
+        
         self.present(nav, animated: true, completion: nil)
         
         // Here we configure the picker to only show videos, no photos.
-//        var config = YPImagePickerConfiguration()
-//        config.screens = [.library, .video]
-//        config.library.mediaType = .video
-//
-//        let picker = YPImagePicker(configuration: config)
-//        picker.didFinishPicking { [unowned picker] items, _ in
-//            if let video = items.singleVideo {
-//                //                print(video.fromCamera)
-//                //                print(video.thumbnail)
-//                //                print(video.url)
-//               // self.uploadVideoToFirebase(localUrl: video.url)
-//
-//            }
-//            picker.dismiss(animated: true, completion: nil)
-//        }
-//        present(picker, animated: true, completion: nil)
+        //        var config = YPImagePickerConfiguration()
+        //        config.screens = [.library, .video]
+        //        config.library.mediaType = .video
+        //
+        //        let picker = YPImagePicker(configuration: config)
+        //        picker.didFinishPicking { [unowned picker] items, _ in
+        //            if let video = items.singleVideo {
+        //                //                print(video.fromCamera)
+        //                //                print(video.thumbnail)
+        //                //                print(video.url)
+        //               // self.uploadVideoToFirebase(localUrl: video.url)
+        //
+        //            }
+        //            picker.dismiss(animated: true, completion: nil)
+        //        }
+        //        present(picker, animated: true, completion: nil)
     }
     
     
@@ -203,10 +217,30 @@ class ImageSaver: NSObject {
 }
 
 extension ViewController: EditControllerDelegate {
-
+    
     func editController(_ editController: EditController, didFinishEditing session: Session) {
-        let controller = UIViewController()
-
-        editController.navigationController?.pushViewController(controller, animated: true)
+        if let video = session.video {
+            DispatchQueue.main.async {
+                MBProgressHUD.showAdded(to: self.view, animated: true)
+            }
+            VideoExporter.shared.export(video: video, progress: { progress in
+                print("Export progress: \(progress)")
+            }, completion: { error in
+                if let error = error {
+                    print("Unable to export video: \(error)")
+                    DispatchQueue.main.async {
+                        MBProgressHUD.hide(for: self.view, animated: true)
+                    }
+                    return
+                }
+                self.videoURl = video.exportedVideoURL
+                print("Finished video export at URL: \(video.exportedVideoURL)")
+                editController.dismiss(animated: true) {
+                    if let url = self.videoURl {
+                        self.uploadVideoToFirebase(localUrl: url)
+                    }
+                }
+            })
+        }
     }
 }

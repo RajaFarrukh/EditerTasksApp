@@ -889,7 +889,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KG7T95777W;
+				DEVELOPMENT_TEAM = 8R4X5WHK32;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -924,9 +924,9 @@
 				);
 				INFOPLIST_FILE = EditerTasksApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "EditerTasksApp ";
-				INFOPLIST_KEY_NSCameraUsageDescription = "App wants to access your camera to capture your photo and edit.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "App wants to access your microphone to record your voice while video capeturing.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App wants to access your photo library to get your photo and edit.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to the photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -942,7 +942,7 @@
 				MTL_HEADER_SEARCH_PATHS = "${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers";
 				PRODUCT_BUNDLE_IDENTIFIER = com.editer.tasksApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "MobileApp Development";
+				PROVISIONING_PROFILE_SPECIFIER = happerTestApp_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -959,7 +959,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KG7T95777W;
+				DEVELOPMENT_TEAM = 8R4X5WHK32;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -994,9 +994,9 @@
 				);
 				INFOPLIST_FILE = EditerTasksApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "EditerTasksApp ";
-				INFOPLIST_KEY_NSCameraUsageDescription = "App wants to access your camera to capture your photo and edit.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to the camera.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "App wants to access your microphone to record your voice while video capeturing.";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App wants to access your photo library to get your photo and edit.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "This app requires access to the photo library.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1012,7 +1012,7 @@
 				MTL_HEADER_SEARCH_PATHS = "${PODS_CONFIGURATION_BUILD_DIR}/MetalPetal/MetalPetal.framework/Headers";
 				PRODUCT_BUNDLE_IDENTIFIER = com.editer.tasksApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "MobileApp Development";
+				PROVISIONING_PROFILE_SPECIFIER = happerTestApp_development;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
